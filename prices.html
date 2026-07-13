@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- prices.html — Full Price List with Search Filter -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Price List — Lathasri Makeovers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-scissors me-2"></i>Lathasri Makeovers<span>Beauty Parlour & Tailoring</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list" style="font-size:1.5rem;color:#D4AF37;"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="parlour.html">Parlour</a></li>
+          <li class="nav-item"><a class="nav-link" href="tailoring.html">Tailoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Price List</li></ol>
+      </nav>
+      <h1><i class="bi bi-tag me-2" style="color:#D4AF37;"></i>Our Price List</h1>
+      <p>Transparent, affordable pricing for all services</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Search and filter controls -->
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <!--
+            priceSearch input — JS listens to this and filters table rows in real time.
+            id="priceSearch" is required for script.js to find it.
+          -->
+          <div class="input-group">
+            <span class="input-group-text" style="background:#F8D7DA;border-color:#F8D7DA;">
+              <i class="bi bi-search" style="color:#D4AF37;"></i>
+            </span>
+            <input type="text" id="priceSearch" class="search-box form-control"
+                   placeholder="Search services..." aria-label="Search price list" />
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <!-- Category filter buttons — clicking filters by parlour or tailoring -->
+          <button class="filter-btn active" data-filter="all">All Services</button>
+          <button class="filter-btn" data-filter="parlour">Parlour</button>
+          <button class="filter-btn" data-filter="tailoring">Tailoring</button>
+        </div>
+      </div>
+
+      <!-- Price table -->
+      <div class="table-responsive">
+        <!--
+          id="priceTable" — used by script.js to find and filter rows.
+          Bootstrap "table-hover" adds row highlight on mouse-over.
+        -->
+        <table class="table price-table table-hover" id="priceTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Service</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- PARLOUR SERVICES -->
+            <tr data-category="parlour">
+              <td>1</td>
+              <td><strong>Hair Cut</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">From ₹100</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>2</td>
+              <td><strong>Facial</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">From ₹400</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>3</td>
+              <td><strong>Clean Up</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹200</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>4</td>
+              <td><strong>Bleach</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹300</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>5</td>
+              <td><strong>Threading</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹50</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>6</td>
+              <td><strong>Waxing</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹200</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>7</td>
+              <td><strong>Manicure</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹200</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>8</td>
+              <td><strong>Bridal Makeup</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹6,000 – ₹8,000</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>9</td>
+              <td><strong>Party Makeup</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">₹4,000</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="parlour">
+              <td>10</td>
+              <td><strong>Mehendi</strong></td>
+              <td><span class="badge-parlour">Parlour</span></td>
+              <td><strong style="color:#D4AF37;">From ₹200</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+
+            <!-- TAILORING SERVICES -->
+            <tr data-category="tailoring">
+              <td>11</td>
+              <td><strong>Blouse Stitching</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">₹200 (with lining)</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="tailoring">
+              <td>12</td>
+              <td><strong>Designer Blouse</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">From ₹300</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="tailoring">
+              <td>13</td>
+              <td><strong>Chudidar Stitching</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">₹1,000</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="tailoring">
+              <td>14</td>
+              <td><strong>Dress Stitching</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">₹400</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="tailoring">
+              <td>15</td>
+              <td><strong>Alteration</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">₹50 onwards</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="tailoring">
+              <td>16</td>
+              <td><strong>Kids Dresses</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">From ₹500</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+            <tr data-category="tailoring">
+              <td>17</td>
+              <td><strong>Bridal Blouse</strong></td>
+              <td><span class="badge-tailoring">Tailoring</span></td>
+              <td><strong style="color:#D4AF37;">₹500</strong></td>
+              <td><a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book</a></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <!-- No results message — shown by JS when search has no matches -->
+        <div id="noResultsMsg" style="display:none;" class="text-center py-5">
+          <i class="bi bi-search" style="font-size:3rem;color:#ccc;"></i>
+          <p class="mt-3" style="color:#999;">No services found. Try a different search term.</p>
+        </div>
+
+      </div><!-- end table-responsive -->
+
+      <!-- Note about prices -->
+      <div class="alert mt-4" style="background:#fff8e1;border-left:4px solid #D4AF37;border-radius:8px;" role="alert">
+        <i class="bi bi-info-circle-fill me-2" style="color:#D4AF37;"></i>
+        <strong>Note:</strong> Prices may vary based on design complexity and material. Contact us for exact quotes on custom work.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JS for price filter — category buttons need to filter by data-category on tr elements -->
+  <script>
+    // Category filter on table rows (overrides gallery filter in script.js for this page)
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const cat = this.dataset.filter;
+          document.querySelectorAll('#priceTable tbody tr').forEach(row => {
+            row.style.display = (cat === 'all' || row.dataset.category === cat) ? '' : 'none';
+          });
+        });
+      });
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6"><div class="footer-brand mb-3"><i class="bi bi-scissors me-2"></i>Lathasri Makeovers</div><p>Professional beauty and tailoring at affordable prices.</p><div class="mt-3"><a href="#" class="social-icon"><i class="bi bi-facebook"></i></a><a href="#" class="social-icon"><i class="bi bi-instagram"></i></a><a href="https://wa.me/919059012241" class="social-icon"><i class="bi bi-whatsapp"></i></a></div></div>
+        <div class="col-lg-2 col-md-6"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="parlour.html">Parlour</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="prices.html">Prices</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="col-lg-3 col-md-6"><h5>Top Services</h5><ul><li>Bridal Makeup — ₹6,000+</li><li>Party Makeup — ₹4,000</li><li>Facial — From ₹400</li><li>Chudidar — ₹1,000</li><li>Designer Blouse — From ₹300</li></ul></div>
+        <div class="col-lg-3 col-md-6"><h5>Contact Us</h5><p><i class="bi bi-telephone-fill me-2" style="color:#D4AF37;"></i><a href="tel:+919059012241">+91 90590 12241</a></p><p><i class="bi bi-envelope-fill me-2" style="color:#D4AF37;"></i><a href="mailto:gattupallimahesh0351@gmail.com">gattupallimahesh0351@gmail.com</a></p><p><i class="bi bi-clock-fill me-2" style="color:#D4AF37;"></i>Mon–Sat: 9 AM – 8 PM</p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Lathasri Makeovers. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+

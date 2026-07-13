@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--
+  index.html — Home Page
+  This is the entry point of the website.
+  Every visitor lands here first.
+-->
+<html lang="en">
+<head>
+  <!-- Character encoding — always UTF-8 for proper text rendering -->
+  <meta charset="UTF-8" />
+  <!-- Viewport meta tag: essential for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO description shown in Google search results -->
+  <meta name="description" content="Lathasri Makeovers — Professional Beauty Parlour & Tailoring Services. Bridal makeup, hair styling, mehendi, blouse stitching and more." />
+
+  <title>Lathasri Makeovers — Beauty Parlour & Tailoring</title>
+
+  <!-- Bootstrap 5 CSS from CDN — provides grid, components, utilities -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons — icon font library -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts — Playfair Display (headings) + Poppins (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Our custom CSS — always load AFTER Bootstrap so we can override it -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       PAGE LOADER
+       Shown briefly while the page loads.
+       JS hides it once DOM is ready.
+  ====================================================== -->
+  <div class="spinner-overlay">
+    <div class="text-center">
+      <div class="spinner-border" style="color: #D4AF37; width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-3" style="color: #D4AF37; font-family: 'Playfair Display', serif; font-size: 1rem;">
+        Lathasri Makeovers
+      </p>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       NAVIGATION BAR
+       Sticky top — stays visible as user scrolls.
+       Bootstrap "navbar-expand-lg" collapses to hamburger on mobile.
+  ====================================================== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+      <!-- Brand Logo + Business Name -->
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-scissors me-2"></i>Lathasri Makeovers
+        <span>Beauty Parlour & Tailoring</span>
+      </a>
+
+      <!-- Hamburger button — visible only on small screens -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-label="Toggle navigation">
+        <i class="bi bi-list" style="font-size: 1.5rem; color: #D4AF37;"></i>
+      </button>
+
+      <!-- Nav links — collapse on mobile -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="parlour.html">Parlour</a></li>
+          <li class="nav-item"><a class="nav-link" href="tailoring.html">Tailoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+  <!-- ======================================================
+       HERO SECTION
+       The first thing visitors see. Big visual impact.
+       Contains: business name, tagline, 2 CTA buttons.
+  ====================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- LEFT: Text content -->
+        <div class="col-lg-6 col-md-12">
+          <!-- Small badge above the title -->
+          <span class="badge mb-3 px-3 py-2" style="background-color: #F8D7DA; color: #333; font-size: 0.85rem; border-radius: 20px;">
+            <i class="bi bi-star-fill me-1" style="color: #D4AF37;"></i> Professional Beauty & Tailoring
+          </span>
+
+          <h1 class="hero-title">
+            Welcome to <br>
+            <span class="highlight">Lathasri Makeovers</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Transform yourself with our expert beauty treatments and precision tailoring.
+            From bridal makeovers to designer blouses — we make you look and feel your best.
+          </p>
+
+          <!-- Call-to-action buttons -->
+          <div class="d-flex flex-wrap gap-3">
+            <a href="parlour.html" class="btn btn-primary-custom">
+              <i class="bi bi-stars me-2"></i>Explore Services
+            </a>
+            <a href="prices.html" class="btn btn-outline-custom">
+              <i class="bi bi-tag me-2"></i>View Prices
+            </a>
+          </div>
+
+          <!-- Quick stats row -->
+          <div class="row mt-4 pt-3" style="border-top: 1px solid #f0e0e2;">
+            <div class="col-4 text-center">
+              <h4 style="color: #D4AF37; font-weight: 700;">5+</h4>
+              <small style="color: #666; font-size: 0.78rem;">Years Experience</small>
+            </div>
+            <div class="col-4 text-center">
+              <h4 style="color: #D4AF37; font-weight: 700;">500+</h4>
+              <small style="color: #666; font-size: 0.78rem;">Happy Clients</small>
+            </div>
+            <div class="col-4 text-center">
+              <h4 style="color: #D4AF37; font-weight: 700;">20+</h4>
+              <small style="color: #666; font-size: 0.78rem;">Services</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Hero image -->
+        <div class="col-lg-6 col-md-12 hero-image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80"
+            alt="Beauty Parlour Services at Lathasri Makeovers"
+            class="img-fluid"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END HERO SECTION -->
+
+  <!-- ======================================================
+       WHY CHOOSE US SECTION
+       4 feature boxes highlighting key selling points.
+  ====================================================== -->
+  <section class="section-padding bg-light-pink">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <p class="section-subtitle">We combine expertise, hygiene, and passion to give you the best experience</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Feature 1 -->
+        <div class="col-lg-3 col-md-6 text-center fade-in">
+          <div class="feature-icon-box">
+            <i class="bi bi-award-fill" style="color: #D4AF37;"></i>
+          </div>
+          <h5 style="font-weight: 700;">Expert Team</h5>
+          <p style="color: #666; font-size: 0.88rem;">Our trained professionals bring years of experience and passion to every service.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-lg-3 col-md-6 text-center fade-in">
+          <div class="feature-icon-box">
+            <i class="bi bi-shield-check-fill" style="color: #D4AF37;"></i>
+          </div>
+          <h5 style="font-weight: 700;">Hygienic & Safe</h5>
+          <p style="color: #666; font-size: 0.88rem;">We use sterilized tools and premium products for every single client.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-lg-3 col-md-6 text-center fade-in">
+          <div class="feature-icon-box">
+            <i class="bi bi-currency-rupee" style="color: #D4AF37;"></i>
+          </div>
+          <h5 style="font-weight: 700;">Affordable Prices</h5>
+          <p style="color: #666; font-size: 0.88rem;">Professional quality services at prices that fit every budget.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-lg-3 col-md-6 text-center fade-in">
+          <div class="feature-icon-box">
+            <i class="bi bi-heart-fill" style="color: #D4AF37;"></i>
+          </div>
+          <h5 style="font-weight: 700;">Personalized Care</h5>
+          <p style="color: #666; font-size: 0.88rem;">Every client receives individual attention and customized recommendations.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END WHY CHOOSE US -->
+
+  <!-- ======================================================
+       FEATURED SERVICES SECTION
+       Preview cards for top services — links to full pages.
+  ====================================================== -->
+  <section class="section-padding">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="section-title">Featured Services</h2>
+        <p class="section-subtitle">Discover our most popular beauty and tailoring treatments</p>
+      </div>
+
+      <!-- Bootstrap grid: 3 columns on desktop, 2 on tablet, 1 on mobile -->
+      <div class="row g-4">
+
+        <!-- Service Card 1: Bridal Makeup -->
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card card">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80"
+                 class="card-img-top" alt="Bridal Makeup" />
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-stars me-2" style="color: #D4AF37;"></i>Bridal Makeup</h5>
+              <p class="card-text">Look radiant on your special day with our professional bridal makeup package.</p>
+              <span class="price-badge">₹6,000 – ₹8,000</span>
+              <div class="mt-3">
+                <a href="parlour.html" class="btn btn-primary-custom btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2: Designer Blouse -->
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card card">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&q=80"
+                 class="card-img-top" alt="Designer Blouse Stitching" />
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-scissors me-2" style="color: #D4AF37;"></i>Designer Blouse</h5>
+              <p class="card-text">Custom designer blouses crafted to perfection with fine stitching and beautiful patterns.</p>
+              <span class="price-badge">From ₹300</span>
+              <div class="mt-3">
+                <a href="tailoring.html" class="btn btn-primary-custom btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3: Mehendi -->
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card card">
+            <img src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=500&q=80"
+                 class="card-img-top" alt="Mehendi" />
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-flower1 me-2" style="color: #D4AF37;"></i>Mehendi</h5>
+              <p class="card-text">Intricate and beautiful henna designs for weddings, festivals, and special occasions.</p>
+              <span class="price-badge">From ₹200</span>
+              <div class="mt-3">
+                <a href="parlour.html" class="btn btn-primary-custom btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 4: Facial -->
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card card">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80"
+                 class="card-img-top" alt="Facial Treatment" />
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-emoji-smile me-2" style="color: #D4AF37;"></i>Facial</h5>
+              <p class="card-text">Deep cleansing facials to rejuvenate your skin and give you a natural glow.</p>
+              <span class="price-badge">From ₹400</span>
+              <div class="mt-3">
+                <a href="parlour.html" class="btn btn-primary-custom btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 5: Chudidar Stitching -->
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card card">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=500&q=80"
+                 class="card-img-top" alt="Chudidar Stitching" />
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-threads me-2" style="color: #D4AF37;"></i>Chudidar Stitching</h5>
+              <p class="card-text">Well-fitted and stylish chudidar sets stitched to your exact measurements.</p>
+              <span class="price-badge">₹1,000</span>
+              <div class="mt-3">
+                <a href="tailoring.html" class="btn btn-primary-custom btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 6: Party Makeup -->
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card card">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=80"
+                 class="card-img-top" alt="Party Makeup" />
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-palette-fill me-2" style="color: #D4AF37;"></i>Party Makeup</h5>
+              <p class="card-text">Stand out at every event with our stunning party makeup and hair styling.</p>
+              <span class="price-badge">₹4,000</span>
+              <div class="mt-3">
+                <a href="parlour.html" class="btn btn-primary-custom btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end row -->
+
+      <!-- View All button -->
+      <div class="text-center mt-5">
+        <a href="parlour.html" class="btn btn-outline-custom me-3">All Parlour Services</a>
+        <a href="tailoring.html" class="btn btn-outline-custom">All Tailoring Services</a>
+      </div>
+
+    </div>
+  </section>
+  <!-- END FEATURED SERVICES -->
+
+  <!-- ======================================================
+       SPECIAL OFFERS SECTION
+  ====================================================== -->
+  <section class="section-padding bg-light-pink">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="section-title">Special Offers</h2>
+        <p class="section-subtitle">Limited-time deals just for you</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm h-100 card-position-relative" style="border-radius: 12px; overflow: hidden;">
+            <span class="offer-ribbon">HOT DEAL</span>
+            <div class="card-body p-4 text-center">
+              <div class="mb-3" style="font-size: 2.5rem;">💍</div>
+              <h5 class="fw-bold">Bridal Package</h5>
+              <p style="color: #666; font-size: 0.88rem;">Complete bridal makeover including makeup, mehendi, and hair styling.</p>
+              <h4 style="color: #D4AF37; font-weight: 700;">₹10,000</h4>
+              <small style="color: #999; text-decoration: line-through;">₹14,000</small>
+              <div class="mt-3">
+                <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20am%20interested%20in%20the%20*Bridal%20Package*%20(Makeup%20%2B%20Mehendi%20%2B%20Hair%20Styling)." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm h-100 card-position-relative" style="border-radius: 12px; overflow: hidden;">
+            <span class="offer-ribbon">POPULAR</span>
+            <div class="card-body p-4 text-center">
+              <div class="mb-3" style="font-size: 2.5rem;">✨</div>
+              <h5 class="fw-bold">Glow Package</h5>
+              <p style="color: #666; font-size: 0.88rem;">Facial + Cleanup + Manicure combo for a full refresh.</p>
+              <h4 style="color: #D4AF37; font-weight: 700;">₹750</h4>
+              <small style="color: #999; text-decoration: line-through;">₹900</small>
+              <div class="mt-3">
+                <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20am%20interested%20in%20the%20*Glow%20Package*%20(Facial%20%2B%20Cleanup%20%2B%20Manicure)." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm h-100 card-position-relative" style="border-radius: 12px; overflow: hidden;">
+            <span class="offer-ribbon">NEW</span>
+            <div class="card-body p-4 text-center">
+              <div class="mb-3" style="font-size: 2.5rem;">👗</div>
+              <h5 class="fw-bold">Stitch & Style</h5>
+              <p style="color: #666; font-size: 0.88rem;">Blouse stitching + Designer work combo at a special price.</p>
+              <h4 style="color: #D4AF37; font-weight: 700;">₹450</h4>
+              <small style="color: #999; text-decoration: line-through;">₹600</small>
+              <div class="mt-3">
+                <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20am%20interested%20in%20the%20*Stitch%20%26%20Style%20Package*%20(Blouse%20%2B%20Designer%20Work)." target="_blank" class="btn btn-primary-custom btn-sm"><i class="bi bi-whatsapp me-1"></i>Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END SPECIAL OFFERS -->
+
+  <!-- ======================================================
+       CUSTOMER REVIEWS SECTION
+  ====================================================== -->
+  <section class="section-padding">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Real experiences from our happy customers</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The bridal makeup was absolutely stunning! My entire family loved it. Lathasri made my wedding day truly magical."</p>
+            <div class="reviewer-name">— Priya Sharma</div>
+            <small style="color: #aaa; font-size: 0.8rem;">Bridal Makeup Client</small>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The designer blouse stitching is exceptional. Perfect fitting and the embroidery work is so detailed. Highly recommend!"</p>
+            <div class="reviewer-name">— Meena Reddy</div>
+            <small style="color: #aaa; font-size: 0.8rem;">Tailoring Client</small>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very clean and comfortable salon. The facial treatment was so relaxing. My skin feels amazing! Will definitely come back."</p>
+            <div class="reviewer-name">— Kavitha Nair</div>
+            <small style="color: #aaa; font-size: 0.8rem;">Parlour Client</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END REVIEWS -->
+
+  <!-- ======================================================
+       CALL TO ACTION (CTA) SECTION
+       Encourages visitors to make contact.
+  ====================================================== -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #D4AF37 0%, #b8962e 100%);">
+    <div class="container text-center text-white">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px;">
+        Ready to Look Your Best?
+      </h2>
+      <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 35px; max-width: 500px; margin-left: auto; margin-right: auto;">
+        Book an appointment today or WhatsApp us for quick assistance. We'd love to welcome you!
+      </p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-light px-4 py-2 fw-bold" style="border-radius: 30px; color: #D4AF37;">
+          <i class="bi bi-calendar-check me-2"></i>Book Appointment
+        </a>
+        <a href="https://wa.me/919059012241" target="_blank" class="btn-whatsapp btn px-4 py-2 fw-bold">
+          <i class="bi bi-whatsapp me-2"></i>WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- END CTA -->
+
+  <!-- ======================================================
+       FOOTER
+       Common footer used on all pages.
+  ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Column 1: Brand info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <i class="bi bi-scissors me-2"></i>Lathasri Makeovers
+          </div>
+          <p>Your trusted destination for professional beauty treatments and precision tailoring. We make you shine.</p>
+          <!-- Social icons -->
+          <div class="mt-3">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/919059012241" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick links -->
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parlour.html">Parlour</a></li>
+            <li><a href="tailoring.html">Tailoring</a></li>
+            <li><a href="prices.html">Prices</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5>Our Services</h5>
+          <ul>
+            <li>Bridal Makeup</li>
+            <li>Party Makeup</li>
+            <li>Facial & Cleanup</li>
+            <li>Mehendi</li>
+            <li>Blouse Stitching</li>
+            <li>Designer Blouses</li>
+            <li>Chudidar Stitching</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact info -->
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill me-2" style="color: #D4AF37;"></i>QM2Q+R66, Baddi Pochamma Rd, Kathlapur, Telangana 505462</p>
+          <p><i class="bi bi-telephone-fill me-2" style="color: #D4AF37;"></i>
+            <a href="tel:+919059012241">+91 90590 12241</a>
+          </p>
+          <p><i class="bi bi-envelope-fill me-2" style="color: #D4AF37;"></i>
+            <a href="mailto:gattupallimahesh0351@gmail.com">gattupallimahesh0351<br>@gmail.com</a>
+          </p>
+          <p><i class="bi bi-clock-fill me-2" style="color: #D4AF37;"></i>Mon–Sat: 9:00 AM – 8:00 PM</p>
+        </div>
+
+      </div><!-- end row -->
+
+      <!-- Footer bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2024 Lathasri Makeovers. All Rights Reserved. | Designed with <i class="bi bi-heart-fill" style="color: #D4AF37;"></i> for our valued clients.</p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- Scroll to top button — position: fixed, shown by JS on scroll -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS bundle (includes Popper.js for dropdowns/modals) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Our custom JavaScript — always load AFTER Bootstrap -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

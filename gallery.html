@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- gallery.html — Photo Gallery with category filter and modal preview -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Lathasri Makeovers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-scissors me-2"></i>Lathasri Makeovers<span>Beauty Parlour & Tailoring</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list" style="font-size:1.5rem;color:#D4AF37;"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="parlour.html">Parlour</a></li>
+          <li class="nav-item"><a class="nav-link" href="tailoring.html">Tailoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Gallery</li></ol>
+      </nav>
+      <h1><i class="bi bi-images me-2" style="color:#D4AF37;"></i>Our Gallery</h1>
+      <p>A showcase of our best work — from bridal looks to designer blouses</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Category filter buttons -->
+      <div class="text-center mb-5">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="bridal">Bridal Makeup</button>
+        <button class="filter-btn" data-filter="hair">Hair Styling</button>
+        <button class="filter-btn" data-filter="mehendi">Mehendi</button>
+        <button class="filter-btn" data-filter="blouse">Designer Blouses</button>
+        <button class="filter-btn" data-filter="dresses">Dresses</button>
+      </div>
+
+      <!--
+        Gallery grid — Bootstrap 4 columns on desktop, 2 on tablet, 1 on mobile.
+        Each item has data-category for JS filtering and data-bs-toggle for modal.
+      -->
+      <div class="row g-3" id="galleryGrid">
+
+        <!-- Bridal Makeup -->
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="bridal">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=85"
+               data-caption="Bridal Makeup — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=75" alt="Bridal Makeup" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Bridal Makeup</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="bridal">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=85"
+               data-caption="Bridal Glam — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&q=75" alt="Bridal Glam" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Bridal Glam</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="bridal">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=800&q=85"
+               data-caption="Bridal Look — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=400&q=75" alt="Bridal Look" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Bridal Look</p></div>
+          </div>
+        </div>
+
+        <!-- Hair Styling -->
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="hair">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=85"
+               data-caption="Hair Styling — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=75" alt="Hair Styling" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Hair Styling</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="hair">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=85"
+               data-caption="Hair Cut — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=75" alt="Hair Cut" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Hair Cut</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="hair">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=85"
+               data-caption="Hair Treatment — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=400&q=75" alt="Hair Treatment" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Hair Treatment</p></div>
+          </div>
+        </div>
+
+        <!-- Mehendi -->
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="mehendi">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=800&q=85"
+               data-caption="Mehendi Design — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=400&q=75" alt="Mehendi" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Mehendi Design</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="mehendi">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1571950006418-f1f2df1a0e03?w=800&q=85"
+               data-caption="Bridal Mehendi — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1571950006418-f1f2df1a0e03?w=400&q=75" alt="Bridal Mehendi" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Bridal Mehendi</p></div>
+          </div>
+        </div>
+
+        <!-- Designer Blouses -->
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="blouse">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=85"
+               data-caption="Designer Blouse — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&q=75" alt="Designer Blouse" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Designer Blouse</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="blouse">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1583922606661-0822ed0bd916?w=800&q=85"
+               data-caption="Embroidered Blouse — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1583922606661-0822ed0bd916?w=400&q=75" alt="Embroidered Blouse" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Embroidered Blouse</p></div>
+          </div>
+        </div>
+
+        <!-- Dresses -->
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="dresses">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=85"
+               data-caption="Custom Dress — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&q=75" alt="Custom Dress" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Custom Dress</p></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 gallery-item" data-category="dresses">
+          <div data-bs-toggle="modal" data-bs-target="#galleryModal"
+               data-img="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=85"
+               data-caption="Chudidar Dress — Lathasri Makeovers" style="cursor:pointer;">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=400&q=75" alt="Chudidar" />
+            <div class="gallery-overlay"><p><i class="bi bi-zoom-in me-1"></i>Chudidar</p></div>
+          </div>
+        </div>
+
+      </div><!-- end gallery grid -->
+    </div>
+  </section>
+
+  <!--
+    BOOTSTRAP MODAL — Image Preview
+    Clicking any gallery item opens this modal with the full-size image.
+    JS sets the src and caption dynamically.
+  -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-label="Image Preview" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#000;border:none;border-radius:12px;overflow:hidden;">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-2 text-center">
+          <!-- JS will set this src dynamically when a gallery item is clicked -->
+          <img id="modalImage" src="" alt="Gallery Preview" class="img-fluid" style="border-radius:8px;max-height:75vh;object-fit:contain;" />
+          <p id="modalCaption" class="text-white mt-2 mb-0" style="font-size:0.9rem;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS to handle gallery modal image swap -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const galleryModal = document.getElementById('galleryModal');
+      galleryModal.addEventListener('show.bs.modal', function (event) {
+        // The element that triggered the modal
+        const trigger = event.relatedTarget;
+        document.getElementById('modalImage').src = trigger.dataset.img;
+        document.getElementById('modalCaption').textContent = trigger.dataset.caption;
+      });
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6"><div class="footer-brand mb-3"><i class="bi bi-scissors me-2"></i>Lathasri Makeovers</div><p>Showcasing the best of beauty and tailoring craftsmanship.</p><div class="mt-3"><a href="#" class="social-icon"><i class="bi bi-facebook"></i></a><a href="#" class="social-icon"><i class="bi bi-instagram"></i></a><a href="https://wa.me/919059012241" class="social-icon"><i class="bi bi-whatsapp"></i></a></div></div>
+        <div class="col-lg-2 col-md-6"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="parlour.html">Parlour</a></li><li><a href="tailoring.html">Tailoring</a></li><li><a href="prices.html">Prices</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="col-lg-3 col-md-6"><h5>Gallery Categories</h5><ul><li>Bridal Makeup</li><li>Hair Styling</li><li>Mehendi Designs</li><li>Designer Blouses</li><li>Custom Dresses</li></ul></div>
+        <div class="col-lg-3 col-md-6"><h5>Contact Us</h5><p><i class="bi bi-telephone-fill me-2" style="color:#D4AF37;"></i><a href="tel:+919059012241">+91 90590 12241</a></p><p><i class="bi bi-envelope-fill me-2" style="color:#D4AF37;"></i><a href="mailto:gattupallimahesh0351@gmail.com">gattupallimahesh0351@gmail.com</a></p><p><i class="bi bi-clock-fill me-2" style="color:#D4AF37;"></i>Mon–Sat: 9 AM – 8 PM</p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Lathasri Makeovers. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
