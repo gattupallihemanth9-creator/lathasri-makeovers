@@ -27,13 +27,17 @@
 <body>
 
   <!-- ======================================================
-       LADIES ONLY ANNOUNCEMENT BANNER
-       Shown at the very top of every page.
+       BATHUKAMMA FESTIVE ANNOUNCEMENT BANNER
   ====================================================== -->
-  <div style="background: linear-gradient(90deg, #c0175d, #e91e8c); color: #fff; text-align: center; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.5px; z-index: 9999; position: relative;">
+  <div class="bathukamma-banner">
+    🌸 &nbsp; బతుకమ్మ &amp; దసరా స్పెషల్ &nbsp;|&nbsp; 🌼 BATHUKAMMA &amp; DUSSEHRA FESTIVE OFFERS — REVEALING SOON! 🌼 &nbsp;|&nbsp; బతుకమ్మ శుభాకాంక్షలు &nbsp; 🌸
+  </div>
+
+  <!-- LADIES ONLY BANNER -->
+  <div class="ladies-banner">
     <i class="bi bi-gender-female me-2"></i>
     This salon is exclusively for <strong>Ladies &amp; Girls</strong> &nbsp;|&nbsp;
-    <i class="bi bi-heart-fill mx-1" style="color:#ffd6e7;"></i> We welcome women of all ages
+    <i class="bi bi-heart-fill mx-1"></i> We welcome women of all ages
   </div>
 
   <!-- ======================================================
@@ -43,11 +47,11 @@
   ====================================================== -->
   <div class="spinner-overlay">
     <div class="text-center">
-      <div class="spinner-border" style="color: #D4AF37; width: 3rem; height: 3rem;" role="status">
+      <div class="spinner-border" style="color: #C2185B; width: 3rem; height: 3rem;" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
-      <p class="mt-3" style="color: #D4AF37; font-family: 'Playfair Display', serif; font-size: 1rem;">
-        Lathasri Makeovers
+      <p class="mt-3" style="color: #C2185B; font-family: 'Playfair Display', serif; font-size: 1rem;">
+        🌸 Lathasri Makeovers 🌸
       </p>
     </div>
   </div>
@@ -83,6 +87,7 @@
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link festive-nav px-3" href="#festive-offers">🌸 Festive Offers</a></li>
         </ul>
       </div>
 
@@ -101,65 +106,111 @@
 
         <!-- LEFT: Text content -->
         <div class="col-lg-6 col-md-12">
-          <!-- Small badge above the title -->
-          <span class="badge mb-3 px-3 py-2" style="background-color: #F8D7DA; color: #333; font-size: 0.85rem; border-radius: 20px;">
-            <i class="bi bi-star-fill me-1" style="color: #D4AF37;"></i> Professional Beauty & Tailoring
-          </span>
-          <!-- Ladies Only badge -->
-          <span class="badge mb-3 ms-2 px-3 py-2" style="background: linear-gradient(90deg,#c0175d,#e91e8c); color: #fff; font-size: 0.85rem; border-radius: 20px;">
-            <i class="bi bi-gender-female me-1"></i> Ladies Only
-          </span>
+          <!-- Festive badges -->
+          <div class="mb-3 d-flex flex-wrap gap-2">
+            <span class="badge px-3 py-2" style="background:linear-gradient(135deg,#FFE4F0,#FFF0CC);color:#880E4F;font-size:0.82rem;border-radius:20px;font-weight:600;">
+              <i class="bi bi-flower1 me-1"></i> Bathukamma Special
+            </span>
+            <span class="badge px-3 py-2" style="background:linear-gradient(90deg,#880E4F,#C2185B);color:#fff;font-size:0.82rem;border-radius:20px;font-weight:600;">
+              <i class="bi bi-gender-female me-1"></i> Ladies Only
+            </span>
+          </div>
 
           <h1 class="hero-title">
-            Welcome to <br>
-            <span class="highlight">Lathasri Makeovers</span>
+            Celebrate Your Beauty,<br>
+            <span class="highlight">Celebrate Our Traditions</span>
           </h1>
 
           <p class="hero-subtitle">
-            Transform yourself with our expert beauty treatments and precision tailoring.
-            From bridal makeovers to designer blouses — we make you look and feel your best.
+            Expert beauty treatments &amp; precision tailoring — crafted with love for every festive occasion.
+            From bridal makeovers to designer blouses, we make you shine.
           </p>
 
+          <div class="hero-festive-msg">
+            <span class="diya-glow">🪔</span>
+            &nbsp;Bathukamma &amp; Dussehra Festive Offers — Revealing Soon!
+          </div>
+
           <!-- Call-to-action buttons -->
-          <div class="d-flex flex-wrap gap-3">
-            <a href="parlour.html" class="btn btn-primary-custom">
-              <i class="bi bi-stars me-2"></i>Explore Services
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#festive-offers" class="btn btn-festive-offer">
+              <i class="bi bi-gift me-2"></i>Offers Revealing Soon
             </a>
-            <a href="prices.html" class="btn btn-outline-custom">
-              <i class="bi bi-tag me-2"></i>View Prices
+            <a href="parlour.html" class="btn btn-outline-custom">
+              <i class="bi bi-stars me-2"></i>Explore Services
             </a>
           </div>
 
           <!-- Quick stats row -->
-          <div class="row mt-4 pt-3" style="border-top: 1px solid #f0e0e2;">
+          <div class="row pt-3" style="border-top:2px dashed rgba(194,24,91,0.2);">
             <div class="col-4 text-center">
-              <h4 style="color: #D4AF37; font-weight: 700;">5+</h4>
-              <small style="color: #666; font-size: 0.78rem;">Years Experience</small>
+              <h4 style="color:#C2185B;font-weight:700;">5+</h4>
+              <small style="color:#5D4037;font-size:0.78rem;font-weight:600;">Years Experience</small>
             </div>
             <div class="col-4 text-center">
-              <h4 style="color: #D4AF37; font-weight: 700;">500+</h4>
-              <small style="color: #666; font-size: 0.78rem;">Happy Clients</small>
+              <h4 style="color:#C2185B;font-weight:700;">500+</h4>
+              <small style="color:#5D4037;font-size:0.78rem;font-weight:600;">Happy Clients</small>
             </div>
             <div class="col-4 text-center">
-              <h4 style="color: #D4AF37; font-weight: 700;">20+</h4>
-              <small style="color: #666; font-size: 0.78rem;">Services</small>
+              <h4 style="color:#C2185B;font-weight:700;">20+</h4>
+              <small style="color:#5D4037;font-size:0.78rem;font-weight:600;">Services</small>
             </div>
           </div>
         </div>
 
         <!-- RIGHT: Hero image -->
-        <div class="col-lg-6 col-md-12 hero-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80"
-            alt="Beauty Parlour Services at Lathasri Makeovers"
-            class="img-fluid"
-          />
+        <div class="col-lg-6 col-md-12 hero-image-wrap mt-4 mt-lg-0">
+          <!-- Decorative floral ring around image -->
+          <div style="position:relative;display:inline-block;width:100%;">
+            <div style="position:absolute;top:-15px;left:-15px;right:-15px;bottom:-15px;border-radius:45% 55% 45% 55%/55% 45% 55% 45%;border:2px dashed rgba(255,107,157,0.35);z-index:0;animation:floatOrb 6s ease-in-out infinite;"></div>
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80"
+                 alt="Beauty Parlour Services at Lathasri Makeovers"
+                 class="img-fluid" style="position:relative;z-index:1;" />
+          </div>
+          <!-- Floating floral badges -->
+          <div style="position:absolute;top:10%;right:5%;background:linear-gradient(135deg,#FF6B9D,#FF8C00);color:#fff;padding:8px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;box-shadow:0 4px 15px rgba(255,107,157,0.4);">
+            🌸 Festive Season
+          </div>
         </div>
 
       </div>
     </div>
   </section>
   <!-- END HERO SECTION -->
+
+  <!-- ======================================================
+       BATHUKAMMA FESTIVAL OFFER SECTION
+  ====================================================== -->
+  <section class="festival-offer-section" id="festive-offers">
+    <div class="container position-relative" style="z-index:2;">
+      <div class="text-center">
+        <div style="font-size:2rem;letter-spacing:6px;margin-bottom:12px;">🌸 🌼 🌺 🌸 🌼 🌺 🌸</div>
+        <h2 class="offer-main-title">FESTIVE OFFERS REVEALING SOON</h2>
+        <p class="offer-subtitle">Bathukamma &amp; Dussehra / Vijayadashami Special</p>
+        <p class="offer-desc">
+          Something beautiful is coming your way. Stay tuned for our exclusive festive offers on
+          beauty services and tailoring — crafted with love for this festive season.
+          <br><br>
+          <span class="diya-glow">🪔</span>&nbsp;
+          <em style="color:#FFD700;">"బతుకమ్మ పండుగ శుభాకాంక్షలు — Wishing You a Joyful Bathukamma!"</em>
+          &nbsp;<span class="diya-glow">🪔</span>
+        </p>
+        <span class="coming-soon-badge">🌼 Offers Revealing Soon 🌼</span>
+        <div class="offer-services-row">
+          <span class="offer-service-pill">💄 Beauty Services</span>
+          <span class="offer-service-pill">✂️ Tailoring</span>
+          <span class="offer-service-pill">💍 Bridal Packages</span>
+          <span class="offer-service-pill">🌸 Mehendi</span>
+          <span class="offer-service-pill">👗 Festive Looks</span>
+        </div>
+        <div class="mt-4">
+          <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20want%20to%20know%20about%20Bathukamma%20%26%20Dussehra%20festive%20offers." target="_blank" class="btn-whatsapp btn px-4 py-2 fw-bold">
+            <i class="bi bi-whatsapp me-2"></i>Get Notified on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ======================================================
        WHY CHOOSE US SECTION
@@ -170,7 +221,7 @@
 
       <div class="text-center mb-5">
         <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-subtitle">We combine expertise, hygiene, and passion to give you the best experience</p>
+        <p class="section-subtitle">We combine expertise, hygiene, and passion to give you the best festive experience</p>
       </div>
 
       <div class="row g-4">
@@ -224,8 +275,8 @@
     <div class="container">
 
       <div class="text-center mb-5">
-        <h2 class="section-title">Featured Services</h2>
-        <p class="section-subtitle">Discover our most popular beauty and tailoring treatments</p>
+        <h2 class="section-title festive-heading">Festive Glow Starts Here</h2>
+        <p class="section-subtitle">Get ready to shine this festive season with our special beauty &amp; tailoring services</p>
       </div>
 
       <!-- Bootstrap grid: 3 columns on desktop, 2 on tablet, 1 on mobile -->
@@ -346,8 +397,8 @@
     <div class="container">
 
       <div class="text-center mb-5">
-        <h2 class="section-title">Special Offers</h2>
-        <p class="section-subtitle">Limited-time deals just for you</p>
+        <h2 class="section-title festive-heading">Festive Combo Packages</h2>
+        <p class="section-subtitle">Exclusive combinations for the festive season — more value, more beauty</p>
       </div>
 
       <div class="row g-4 justify-content-center">
@@ -413,7 +464,7 @@
 
       <div class="text-center mb-5">
         <h2 class="section-title">What Our Clients Say</h2>
-        <p class="section-subtitle">Real experiences from our happy customers</p>
+        <p class="section-subtitle">Real experiences from our happy festive season clients</p>
       </div>
 
       <div class="row g-4">
@@ -454,16 +505,21 @@
        CALL TO ACTION (CTA) SECTION
        Encourages visitors to make contact.
   ====================================================== -->
-  <section class="section-padding" style="background: linear-gradient(135deg, #D4AF37 0%, #b8962e 100%);">
-    <div class="container text-center text-white">
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px;">
+  <section class="section-padding" style="background:linear-gradient(135deg,#2C1810 0%,#4A1533 50%,#2C1810 100%);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.06;background-image:radial-gradient(circle,#FFD700 1px,transparent 1px);background-size:30px 30px;"></div>
+    <div class="container text-center text-white position-relative" style="z-index:2;">
+      <div style="font-size:1.8rem;letter-spacing:8px;margin-bottom:10px;">🌸 🪔 🌸</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2.2rem;margin-bottom:10px;color:#FFD700;">
         Ready to Look Your Best?
       </h2>
-      <p style="font-size: 1rem; opacity: 0.9; margin-bottom: 35px; max-width: 500px; margin-left: auto; margin-right: auto;">
-        Book an appointment today or WhatsApp us for quick assistance. We'd love to welcome you!
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.8);margin-bottom:10px;max-width:500px;margin-left:auto;margin-right:auto;">
+        Book an appointment today for your festive look — bridal, party, or everyday glamour.
+      </p>
+      <p style="color:rgba(255,215,0,0.7);font-style:italic;font-size:0.88rem;margin-bottom:30px;">
+        "Wishing You a Beautiful &amp; Joyful Festive Season 🌸"
       </p>
       <div class="d-flex flex-wrap gap-3 justify-content-center">
-        <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-light px-4 py-2 fw-bold" style="border-radius: 30px; color: #D4AF37;">
+        <a href="https://wa.me/919059012241?text=Hi%20Lathasri%20Makeovers!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-festive-offer">
           <i class="bi bi-calendar-check me-2"></i>Book Appointment
         </a>
         <a href="https://wa.me/919059012241" target="_blank" class="btn-whatsapp btn px-4 py-2 fw-bold">
@@ -546,7 +602,9 @@
 
       <!-- Footer bottom bar -->
       <div class="footer-bottom">
-        <p>© 2024 Lathasri Makeovers. All Rights Reserved. | Designed with <i class="bi bi-heart-fill" style="color: #D4AF37;"></i> for our valued clients.</p>
+        <p>© 2024 Lathasri Makeovers. All Rights Reserved. | Designed with <i class="bi bi-heart-fill" style="color:#FF6B9D;"></i> for our valued clients.</p>
+        <p class="footer-festive-msg">🌸 Wishing You a Beautiful &amp; Joyful Festive Season 🌸</p>
+        <p style="color:rgba(255,215,0,0.45);font-size:0.78rem;margin-top:4px;">Bathukamma • Dussehra • Celebration • Tradition</p>
       </div>
 
     </div>
@@ -562,6 +620,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Our custom JavaScript — always load AFTER Bootstrap -->
   <script src="js/script.js"></script>
+
+  <!-- Floating Petals Script — Bathukamma festive effect -->
+  <script>
+    const petals = ['🌸','🌼','🌺','🌷','💮'];
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      petal.textContent = petals[Math.floor(Math.random() * petals.length)];
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.fontSize = (0.8 + Math.random() * 0.8) + 'rem';
+      petal.style.animationDuration = (5 + Math.random() * 8) + 's';
+      petal.style.animationDelay = (Math.random() * 3) + 's';
+      document.body.appendChild(petal);
+      // Remove after animation completes to prevent DOM bloat
+      setTimeout(() => petal.remove(), 14000);
+    }
+    // Create 8 petals on load, then one every 2.5s (max 8 at a time)
+    for (let i = 0; i < 8; i++) setTimeout(createPetal, i * 600);
+    setInterval(createPetal, 2500);
+  </script>
 
 </body>
 </html>
