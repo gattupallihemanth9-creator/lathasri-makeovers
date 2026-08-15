@@ -1827,3 +1827,238 @@ body {
   .service-card .card-img-top { height: 190px; }
   #scrollTopBtn { bottom: 20px; right: 20px; }
 }
+
+
+/* ==========================================================
+   FESTIVE VIBE EXTENSIONS — Full Site Coverage
+   ========================================================== */
+
+/* Override old bg-light-pink to festive gradient */
+.bg-light-pink {
+  background: linear-gradient(135deg, #FFF0F5 0%, #FFF8E7 50%, #FFF0E0 100%) !important;
+}
+
+/* Breadcrumb festive colors */
+.breadcrumb-item a {
+  color: var(--accent-magenta) !important;
+  font-weight: 600;
+}
+
+/* Accordion festive update */
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #FFE4F0, #FFF0CC) !important;
+  color: var(--accent-magenta) !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(194,24,91,0.15) !important;
+}
+
+/* Alert festive update */
+.alert {
+  border-radius: 12px !important;
+}
+
+/* Form select festive border */
+.form-select.form-control-custom {
+  border: 2px solid #FFE4F0;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.form-select.form-control-custom:focus {
+  border-color: var(--accent-magenta);
+  box-shadow: 0 0 0 3px rgba(194,24,91,0.12);
+}
+
+/* Input group text festive */
+.input-group-text {
+  background: linear-gradient(135deg, #FFE4F0, #FFF0CC) !important;
+  border-color: #FFD0E8 !important;
+  color: var(--accent-magenta) !important;
+}
+
+/* Stats row in hero — festive style */
+.hero-stats-row {
+  border-top: 2px dashed rgba(194,24,91,0.2);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+/* Festive floral row divider */
+.floral-row-divider {
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 1.1rem;
+  opacity: 0.4;
+  padding: 8px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Card body padding fix */
+.service-card .card-body {
+  padding: 20px;
+}
+
+/* Table hover festive */
+.table-hover tbody tr:hover {
+  background-color: #FFF0F5 !important;
+}
+
+/* Spinner festive color */
+.spinner-border {
+  color: #C2185B !important;
+}
+
+/* Modal festive close button area */
+.modal-header .btn-close-white {
+  filter: invert(0) !important;
+}
+
+/* Footer icon links festive */
+.footer .bi-geo-alt-fill,
+.footer .bi-telephone-fill,
+.footer .bi-envelope-fill,
+.footer .bi-clock-fill {
+  color: var(--accent-yellow) !important;
+}
+
+/* Section divider emoji row */
+.section-emoji-divider {
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  padding: 5px 0;
+  opacity: 0.5;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Festive badge pill used in page heroes */
+.festive-badge-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, #FFE4F0, #FFF0CC);
+  color: #880E4F;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid rgba(194,24,91,0.2);
+}
+
+/* Offer service pill hover */
+.offer-service-pill:hover {
+  background: rgba(255,215,0,0.2);
+  border-color: rgba(255,215,0,0.8);
+  transform: translateY(-2px);
+  transition: var(--transition);
+  cursor: default;
+}
+
+/* Team card festive hover ring */
+.team-card:hover img {
+  border-color: var(--accent-marigold);
+  box-shadow: 0 0 0 4px rgba(255,140,0,0.2);
+}
+
+/* Mission Vision card festive */
+.mv-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-card::after {
+  content: '🌸';
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 2rem;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Testimonial card quote mark update */
+.testimonial-card::before {
+  content: '❝';
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 3rem;
+  color: rgba(194,24,91,0.10);
+  font-family: serif;
+  line-height: 1;
+}
+
+/* Price table number column */
+.price-table tbody td:first-child {
+  color: var(--accent-magenta);
+  font-weight: 700;
+}
+
+/* Gallery item festive border on hover */
+.gallery-item:hover {
+  border-color: rgba(194,24,91,0.4) !important;
+  box-shadow: 0 8px 30px rgba(194,24,91,0.2);
+}
+
+/* Coming soon badge text glow */
+.coming-soon-badge {
+  text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}
+
+/* Petal z-index fix — behind content */
+.petal {
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+/* Ensure content is above petals */
+.navbar, .hero-section, section, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Navbar z-index fix */
+.navbar {
+  z-index: 1030 !important;
+}
+
+/* Fix spinner overlay z-index */
+.spinner-overlay {
+  z-index: 9999 !important;
+}
+
+/* Festive scrollbar (WebKit browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF0F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#C2185B, #FF8C00);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#880E4F, #C2185B);
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(194,24,91,0.2);
+  color: #2C1810;
+}
+
+/* Final responsive check */
+@media (max-width: 768px) {
+  .offer-main-title { font-size: 1.6rem; }
+  .bathukamma-banner { font-size: 0.75rem; letter-spacing: 0.3px; }
+  .offer-services-row { gap: 10px; }
+  .offer-service-pill { padding: 6px 14px; font-size: 0.78rem; }
+  .floral-divider { letter-spacing: 4px; font-size: 1rem; }
+}
