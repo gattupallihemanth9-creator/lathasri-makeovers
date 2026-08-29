@@ -2062,3 +2062,274 @@ body {
   .offer-service-pill { padding: 6px 14px; font-size: 0.78rem; }
   .floral-divider { letter-spacing: 4px; font-size: 1rem; }
 }
+
+
+/* ==========================================================
+   BIGGER BATHUKAMMA DECORATIONS
+   Large flower stacks, garland borders, prominent visuals
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   BATHUKAMMA FLOWER STACK — SVG inline decoration
+   Used as big section dividers and corner decorations
+   ---------------------------------------------------------- */
+
+/* Big garland border strip between sections */
+.bathukamma-garland {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 2.8rem;
+  letter-spacing: 6px;
+  line-height: 1;
+  background: linear-gradient(135deg, #FFF0F5, #FFF8E7, #FFF0E0);
+  border-top: 3px solid rgba(194,24,91,0.15);
+  border-bottom: 3px solid rgba(194,24,91,0.15);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Large Bathukamma flower tower — the iconic stacked flower shape */
+.bathukamma-tower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  line-height: 0.85;
+}
+.bathukamma-tower span {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  filter: drop-shadow(0 2px 4px rgba(194,24,91,0.3));
+}
+.bathukamma-tower span:nth-child(1)  { font-size: 0.9rem; }
+.bathukamma-tower span:nth-child(2)  { font-size: 1.1rem; }
+.bathukamma-tower span:nth-child(3)  { font-size: 1.3rem; }
+.bathukamma-tower span:nth-child(4)  { font-size: 1.6rem; }
+.bathukamma-tower span:nth-child(5)  { font-size: 1.9rem; }
+.bathukamma-tower span:nth-child(6)  { font-size: 2.2rem; }
+.bathukamma-tower span:nth-child(7)  { font-size: 2.5rem; }
+.bathukamma-tower span:nth-child(8)  { font-size: 2.0rem; }
+.bathukamma-tower span:nth-child(9)  { font-size: 1.4rem; filter: drop-shadow(0 2px 6px rgba(255,215,0,0.6)); }
+
+/* Section with two Bathukamma towers on either side */
+.bathukamma-section-wrap {
+  position: relative;
+}
+.bathukamma-section-wrap .btower-left,
+.bathukamma-section-wrap .btower-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.bathukamma-section-wrap .btower-left  { left: 10px; }
+.bathukamma-section-wrap .btower-right { right: 10px; }
+.bathukamma-section-wrap .btower-left .bathukamma-tower span,
+.bathukamma-section-wrap .btower-right .bathukamma-tower span {
+  font-size: calc(var(--sz, 1rem) * 2);
+}
+
+/* Big Bathukamma hero decoration — shown in hero section */
+.hero-bathukamma-decor {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.07;
+  font-size: 12rem;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ----------------------------------------------------------
+   SECTION FLOWER HEADER — big centered flower row
+   ---------------------------------------------------------- */
+.flower-section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.flower-section-header .big-flowers {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  display: block;
+  line-height: 1;
+  filter: drop-shadow(0 3px 6px rgba(194,24,91,0.25));
+  animation: flowerSway 3s ease-in-out infinite;
+}
+.flower-section-header .medium-flowers {
+  font-size: 1.8rem;
+  letter-spacing: 14px;
+  display: block;
+  margin-top: 4px;
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 4px rgba(255,140,0,0.2));
+}
+
+@keyframes flowerSway {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  33%       { transform: scale(1.04) rotate(1deg); }
+  66%       { transform: scale(0.97) rotate(-1deg); }
+}
+
+/* ----------------------------------------------------------
+   FESTIVAL BANNER — wider, bolder top bar
+   ---------------------------------------------------------- */
+.bathukamma-banner {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* ----------------------------------------------------------
+   BATHUKAMMA FULL DECORATION ROW
+   A prominent row of layered flower stacks shown between sections
+   ---------------------------------------------------------- */
+.bathukamma-decor-row {
+  background: linear-gradient(135deg, #2C1810 0%, #4A1533 50%, #2C1810 100%);
+  padding: 28px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.bathukamma-decor-row::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,215,0,0.08) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+.bathukamma-decor-row .towers-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+.bathukamma-decor-row .tower-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.bathukamma-decor-row .tower-wrap .tl {
+  display: block;
+  text-align: center;
+  line-height: 0.88;
+  filter: drop-shadow(0 2px 6px rgba(255,215,0,0.4));
+}
+/* Sizes for each layer — tallest in the middle */
+.tower-sm .tl { font-size: 1.2rem; }
+.tower-sm .tl:nth-child(1) { font-size: 0.8rem; }
+.tower-sm .tl:nth-child(2) { font-size: 0.95rem; }
+.tower-sm .tl:nth-child(3) { font-size: 1.1rem; }
+.tower-sm .tl:nth-child(4) { font-size: 1.25rem; }
+.tower-sm .tl:nth-child(5) { font-size: 1.4rem; }
+.tower-sm .tl:nth-child(6) { font-size: 1.0rem; }
+
+.tower-md .tl { font-size: 1.5rem; }
+.tower-md .tl:nth-child(1) { font-size: 0.9rem; }
+.tower-md .tl:nth-child(2) { font-size: 1.1rem; }
+.tower-md .tl:nth-child(3) { font-size: 1.35rem; }
+.tower-md .tl:nth-child(4) { font-size: 1.6rem; }
+.tower-md .tl:nth-child(5) { font-size: 1.85rem; }
+.tower-md .tl:nth-child(6) { font-size: 2.1rem; }
+.tower-md .tl:nth-child(7) { font-size: 1.5rem; }
+.tower-md .tl:nth-child(8) { font-size: 1.0rem; }
+
+.tower-lg .tl { font-size: 2rem; }
+.tower-lg .tl:nth-child(1) { font-size: 1.0rem; }
+.tower-lg .tl:nth-child(2) { font-size: 1.3rem; }
+.tower-lg .tl:nth-child(3) { font-size: 1.7rem; }
+.tower-lg .tl:nth-child(4) { font-size: 2.1rem; }
+.tower-lg .tl:nth-child(5) { font-size: 2.5rem; }
+.tower-lg .tl:nth-child(6) { font-size: 2.9rem; }
+.tower-lg .tl:nth-child(7) { font-size: 2.2rem; }
+.tower-lg .tl:nth-child(8) { font-size: 1.6rem; }
+.tower-lg .tl:nth-child(9) { font-size: 1.0rem; filter: drop-shadow(0 0 8px gold); }
+
+.bathukamma-decor-row .decor-text {
+  color: rgba(255,215,0,0.85);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 16px;
+  position: relative;
+  z-index: 2;
+}
+.bathukamma-decor-row .decor-sub {
+  color: rgba(255,182,193,0.8);
+  font-size: 0.85rem;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ----------------------------------------------------------
+   PAGE HERO — big side flower decorations
+   ---------------------------------------------------------- */
+.page-hero .hero-flower-left,
+.page-hero .hero-flower-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  line-height: 1;
+  opacity: 0.12;
+  pointer-events: none;
+  user-select: none;
+}
+.page-hero .hero-flower-left  { left: 20px; }
+.page-hero .hero-flower-right { right: 20px; }
+
+/* ----------------------------------------------------------
+   SECTION TITLE — big flower decoration
+   ---------------------------------------------------------- */
+.section-title::after {
+  content: '🌸 🌼 🌺';
+  display: block;
+  font-size: 1.8rem;
+  margin: 8px auto 0;
+  letter-spacing: 8px;
+  filter: drop-shadow(0 2px 4px rgba(194,24,91,0.2));
+}
+
+/* ----------------------------------------------------------
+   BIGGER GARLAND TOP BORDER for sections
+   ---------------------------------------------------------- */
+.festive-section-border-top {
+  border-top: 4px solid transparent;
+  border-image: repeating-linear-gradient(
+    90deg,
+    #FF6B9D 0px, #FF6B9D 8px,
+    #FFD700 8px, #FFD700 16px,
+    #FF8C00 16px, #FF8C00 24px,
+    #C2185B 24px, #C2185B 32px
+  ) 1;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE — scale down big decors on mobile
+   ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .tower-lg .tl:nth-child(6) { font-size: 2rem; }
+  .tower-lg .tl:nth-child(5) { font-size: 1.8rem; }
+  .tower-md .tl:nth-child(6) { font-size: 1.5rem; }
+  .bathukamma-decor-row .towers-row { gap: 10px; }
+  .page-hero .hero-flower-left,
+  .page-hero .hero-flower-right { font-size: 3rem; opacity: 0.08; }
+  .flower-section-header .big-flowers { font-size: 2rem; letter-spacing: 6px; }
+}
+@media (max-width: 480px) {
+  .tower-sm { display: none; }
+  .bathukamma-decor-row { padding: 20px 0; }
+}
