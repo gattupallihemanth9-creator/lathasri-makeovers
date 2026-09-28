@@ -1,38 +1,36 @@
 /* ==========================================================
    style.css — Lathasri Makeovers | Bathukamma Festive Theme
    Author: Kiro AI
-   Description: Telugu Bathukamma festive theme with elegant
-   floral motifs, festive color palette, and premium animations.
+   Description: Bold, vibrant Bathukamma festive theme.
    ========================================================== */
 
 /* ----------------------------------------------------------
-   1. CSS VARIABLES — Bathukamma Festive Palette
+   1. CSS VARIABLES — Bold Vibrant Bathukamma Palette
    ---------------------------------------------------------- */
 :root {
-  /* Bathukamma flower-inspired palette */
-  --primary-color: #FF6B9D;       /* Magenta Pink — Bathukamma flower */
-  --primary-light: #FFE4F0;       /* Soft pink tint for backgrounds */
-  --primary-dark:  #d4527e;       /* Deep pink for hover */
-  --secondary-color: #D4AF37;     /* Gold — festive accent */
-  --secondary-dark:  #b8962e;     /* Deep gold hover */
-  --accent-marigold: #FF8C00;     /* Marigold orange */
-  --accent-yellow:   #FFD700;     /* Festival yellow */
+  /* Bold vibrant Bathukamma palette */
+  --primary-color: #E91E8C;       /* Hot Magenta Pink */
+  --primary-light: #FCE4EC;       /* Light pink tint */
+  --primary-dark:  #AD1457;       /* Deep magenta */
+  --secondary-color: #FFB300;     /* Bright Amber Gold */
+  --secondary-dark:  #E65100;     /* Deep orange */
+  --accent-marigold: #FF6D00;     /* Bright marigold */
+  --accent-yellow:   #FFD600;     /* Vivid yellow */
   --accent-green:    #2E7D32;     /* Leaf green */
-  --accent-magenta:  #C2185B;     /* Deep magenta */
-  --accent-cream:    #FFF8E7;     /* Warm cream */
-  --text-color: #2C1810;          /* Deep warm brown — readable on cream */
-  --text-light: #5D4037;          /* Medium brown — secondary text */
+  --accent-magenta:  #880E4F;     /* Very deep magenta */
+  --accent-cream:    #FFF8E1;     /* Warm cream */
+  --text-color: #1A0010;          /* Near-black — maximum readability */
+  --text-light: #4A0030;          /* Deep magenta-tinted dark — still readable */
   --bg-white: #ffffff;
-  --bg-light: #FFF8E7;            /* Warm cream background */
-  --bg-festive: linear-gradient(135deg, #FFF0F5 0%, #FFF8E7 50%, #FFF0E0 100%);
-  --shadow-sm: 0 2px 12px rgba(194,24,91,0.10);
-  --shadow-md: 0 4px 24px rgba(194,24,91,0.15);
-  --shadow-lg: 0 8px 32px rgba(194,24,91,0.20);
+  --bg-light: #FFF0F5;            /* Light pink — clearly visible */
+  --bg-festive: linear-gradient(135deg, #FCE4EC 0%, #FFF8E1 50%, #FCE4EC 100%);
+  --shadow-sm: 0 2px 14px rgba(233,30,140,0.18);
+  --shadow-md: 0 4px 28px rgba(233,30,140,0.22);
+  --shadow-lg: 0 8px 36px rgba(233,30,140,0.28);
   --border-radius: 16px;
   --transition: all 0.35s ease;
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Poppins', sans-serif;
-  --floral-border: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='3' fill='%23FF6B9D' opacity='0.3'/%3E%3C/svg%3E");
 }
 
 /* ----------------------------------------------------------
@@ -2332,4 +2330,596 @@ body {
 @media (max-width: 480px) {
   .tower-sm { display: none; }
   .bathukamma-decor-row { padding: 20px 0; }
+}
+
+
+/* ==========================================================
+   BOLD VIBRANT COLOR OVERRIDES — Make Everything Pop
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   BODY & TEXT — High contrast, clearly readable
+   ---------------------------------------------------------- */
+body {
+  background-color: #fff;
+  color: #1A0010;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1A0010 !important;
+}
+
+p, li, td, th, small, span {
+  color: #2D0020;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR — Bold border, strong brand color
+   ---------------------------------------------------------- */
+.navbar {
+  background: #fff !important;
+  border-bottom: 4px solid #E91E8C !important;
+  box-shadow: 0 3px 20px rgba(233,30,140,0.25) !important;
+}
+
+.navbar-brand {
+  color: #880E4F !important;
+  font-size: 1.5rem !important;
+}
+
+.navbar-brand span {
+  color: #E65100 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #1A0010 !important;
+  font-weight: 600 !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: linear-gradient(135deg, #FCE4EC, #FFF8E1) !important;
+  color: #880E4F !important;
+}
+
+/* ----------------------------------------------------------
+   HERO SECTION — Vivid background, strong text
+   ---------------------------------------------------------- */
+.hero-section {
+  background: linear-gradient(135deg, #FCE4EC 0%, #FFF8E1 45%, #FCE4EC 100%) !important;
+}
+
+.hero-title {
+  color: #1A0010 !important;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, #880E4F, #E65100) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-size: 3.2rem !important;
+}
+
+.hero-subtitle {
+  color: #3E0030 !important;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+}
+
+.hero-festive-msg {
+  background: linear-gradient(135deg, #880E4F, #E65100) !important;
+  color: #fff !important;
+  border-left: none !important;
+  padding: 10px 18px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+}
+
+/* Stats numbers */
+.hero-section h4 {
+  color: #880E4F !important;
+  font-size: 1.8rem !important;
+}
+
+.hero-section small {
+  color: #3E0030 !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   BUTTONS — Vivid, eye-catching
+   ---------------------------------------------------------- */
+.btn-primary-custom {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(136,14,79,0.4) !important;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(135deg, #E65100, #FFB300) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 22px rgba(230,81,0,0.45) !important;
+  transform: translateY(-3px) !important;
+}
+
+.btn-outline-custom {
+  color: #880E4F !important;
+  border: 2px solid #880E4F !important;
+  font-weight: 700 !important;
+}
+
+.btn-outline-custom:hover {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.btn-festive-offer {
+  background: linear-gradient(135deg, #FFD600, #E65100) !important;
+  color: #1A0010 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 20px rgba(230,81,0,0.45) !important;
+}
+
+.btn-festive-offer:hover {
+  transform: translateY(-4px) scale(1.04) !important;
+  box-shadow: 0 8px 30px rgba(230,81,0,0.55) !important;
+  color: #1A0010 !important;
+}
+
+/* ----------------------------------------------------------
+   SECTION BACKGROUNDS — Vivid, clearly differentiated
+   ---------------------------------------------------------- */
+.bg-light-pink,
+section[style*="FFF0F5"],
+section[style*="FFF8E7"],
+section[style*="FFF0E0"] {
+  background: linear-gradient(135deg, #FCE4EC 0%, #FFF8E1 50%, #FCE4EC 100%) !important;
+}
+
+/* ----------------------------------------------------------
+   SECTION TITLES — Bold, deep color
+   ---------------------------------------------------------- */
+.section-title {
+  color: #880E4F !important;
+  font-size: 2.4rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 1px 4px rgba(136,14,79,0.15);
+}
+
+.section-subtitle {
+  color: #3E0030 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+/* ----------------------------------------------------------
+   PAGE HERO — Vivid gradient, bold text
+   ---------------------------------------------------------- */
+.page-hero {
+  background: linear-gradient(135deg, #FCE4EC 0%, #FFF8E1 60%, #FCE4EC 100%) !important;
+  border-bottom: 4px solid #E91E8C !important;
+}
+
+.page-hero h1 {
+  color: #880E4F !important;
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
+}
+
+.page-hero p {
+  color: #3E0030 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+/* ----------------------------------------------------------
+   SERVICE CARDS — Bold borders, vivid price badges
+   ---------------------------------------------------------- */
+.service-card {
+  border: 2px solid rgba(233,30,140,0.25) !important;
+}
+
+.service-card:hover {
+  border-color: #E91E8C !important;
+  box-shadow: 0 10px 35px rgba(233,30,140,0.25) !important;
+}
+
+.service-card .card-title {
+  color: #880E4F !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
+.service-card .card-text {
+  color: #3E0030 !important;
+  font-size: 0.88rem !important;
+}
+
+.price-badge {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+  box-shadow: 0 3px 10px rgba(136,14,79,0.35) !important;
+}
+
+/* ----------------------------------------------------------
+   FEATURE ICONS — Bold fill
+   ---------------------------------------------------------- */
+.feature-icon-box {
+  background: linear-gradient(135deg, #FCE4EC, #FFF8E1) !important;
+  border: 2px solid rgba(233,30,140,0.3) !important;
+}
+
+.feature-icon-box:hover {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+}
+
+.feature-icon-box i {
+  color: #880E4F !important;
+}
+
+.feature-icon-box:hover i {
+  color: #fff !important;
+}
+
+/* Feature text */
+section h5[style*="font-weight:700"] {
+  color: #1A0010 !important;
+  font-size: 1.05rem !important;
+}
+
+/* ----------------------------------------------------------
+   TESTIMONIALS — Vivid accent border
+   ---------------------------------------------------------- */
+.testimonial-card {
+  border-left: 5px solid #E91E8C !important;
+  background: #fff !important;
+}
+
+.testimonial-card p {
+  color: #3E0030 !important;
+  font-size: 0.92rem !important;
+}
+
+.reviewer-name {
+  color: #880E4F !important;
+  font-weight: 800 !important;
+}
+
+.testimonial-card .stars {
+  color: #E65100 !important;
+  font-size: 1.1rem !important;
+}
+
+/* ----------------------------------------------------------
+   PRICE TABLE — Bold header
+   ---------------------------------------------------------- */
+.price-table thead {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+}
+
+.price-table tbody tr:hover {
+  background-color: #FCE4EC !important;
+}
+
+.price-table tbody td {
+  color: #1A0010 !important;
+  font-weight: 500 !important;
+}
+
+.price-table tbody td:first-child {
+  color: #880E4F !important;
+  font-weight: 800 !important;
+}
+
+.badge-parlour {
+  background: linear-gradient(135deg, #FCE4EC, #F48FB1) !important;
+  color: #880E4F !important;
+  font-weight: 700 !important;
+}
+
+.badge-tailoring {
+  background: linear-gradient(135deg, #FFF8E1, #FFE082) !important;
+  color: #E65100 !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   CONTACT PAGE — Bold icons and form
+   ---------------------------------------------------------- */
+.contact-icon {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+  box-shadow: 0 4px 16px rgba(136,14,79,0.35) !important;
+}
+
+.form-control-custom:focus {
+  border-color: #E91E8C !important;
+  box-shadow: 0 0 0 3px rgba(233,30,140,0.18) !important;
+}
+
+.hours-table .time {
+  color: #880E4F !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   ABOUT PAGE — Team and mission
+   ---------------------------------------------------------- */
+.team-card img {
+  border-color: #E91E8C !important;
+}
+
+.mv-card {
+  border-top: 4px solid #E91E8C !important;
+  background: linear-gradient(135deg, #FCE4EC 0%, #FFF8E1 100%) !important;
+}
+
+/* ----------------------------------------------------------
+   GALLERY — Vivid overlay
+   ---------------------------------------------------------- */
+.gallery-overlay {
+  background: linear-gradient(transparent, rgba(136,14,79,0.92)) !important;
+}
+
+.filter-btn {
+  border-color: #880E4F !important;
+  color: #880E4F !important;
+  font-weight: 700 !important;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* ----------------------------------------------------------
+   FOOTER — Strong deep background, vivid headings
+   ---------------------------------------------------------- */
+.footer {
+  background: linear-gradient(135deg, #1A0010 0%, #3E0030 50%, #1A0010 100%) !important;
+}
+
+.footer h5 {
+  color: #FFD600 !important;
+  font-size: 1rem !important;
+}
+
+.footer p, .footer li, .footer a {
+  color: #F8BBD0 !important;
+}
+
+.footer a:hover {
+  color: #FFD600 !important;
+}
+
+.footer-brand {
+  background: linear-gradient(135deg, #FFD600, #FF6D00) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,214,0,0.2) !important;
+  color: #F48FB1 !important;
+}
+
+.footer-festive-msg {
+  color: rgba(255,214,0,0.9) !important;
+  font-weight: 600 !important;
+}
+
+.social-icon {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,214,0,0.3) !important;
+  color: #F8BBD0 !important;
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, #880E4F, #E91E8C) !important;
+  color: #fff !important;
+}
+
+/* ----------------------------------------------------------
+   BATHUKAMMA DECOR ROW — More vivid
+   ---------------------------------------------------------- */
+.bathukamma-decor-row {
+  background: linear-gradient(135deg, #1A0010 0%, #3E0030 50%, #1A0010 100%) !important;
+  border-top: 3px solid #E91E8C;
+  border-bottom: 3px solid #E91E8C;
+}
+
+.bathukamma-decor-row .decor-text {
+  color: #FFD600 !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 15px rgba(255,214,0,0.5);
+}
+
+.bathukamma-decor-row .decor-sub {
+  color: #F48FB1 !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   FESTIVAL OFFER SECTION — Maximum impact
+   ---------------------------------------------------------- */
+.festival-offer-section {
+  background: linear-gradient(135deg, #1A0010 0%, #3E0030 40%, #1A0010 100%) !important;
+}
+
+.offer-main-title {
+  color: #FFD600 !important;
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 20px rgba(255,214,0,0.6) !important;
+}
+
+.offer-subtitle {
+  color: #F48FB1 !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+}
+
+.offer-desc {
+  color: rgba(255,255,255,0.9) !important;
+  font-size: 0.95rem !important;
+}
+
+.offer-service-pill {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,214,0,0.5) !important;
+  font-weight: 600 !important;
+}
+
+.coming-soon-badge {
+  background: linear-gradient(135deg, #FFD600, #E65100) !important;
+  color: #1A0010 !important;
+  font-weight: 800 !important;
+}
+
+/* ----------------------------------------------------------
+   BATHUKAMMA GARLAND — Vivid
+   ---------------------------------------------------------- */
+.bathukamma-garland {
+  background: linear-gradient(135deg, #FCE4EC, #FFF8E1, #FCE4EC) !important;
+  border-top: 3px solid #E91E8C !important;
+  border-bottom: 3px solid #E91E8C !important;
+  font-size: 2.2rem !important;
+}
+
+/* ----------------------------------------------------------
+   TOP BANNER — Brighter shimmer
+   ---------------------------------------------------------- */
+.bathukamma-banner {
+  background: linear-gradient(90deg, #880E4F, #E91E8C, #E65100, #FFD600, #E65100, #E91E8C, #880E4F) !important;
+  background-size: 200% auto !important;
+  animation: bannerShimmer 3s linear infinite !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  color: #fff !important;
+}
+
+/* Ladies Only banner */
+.ladies-banner {
+  background: linear-gradient(90deg, #880E4F, #AD1457) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   FLOWER HEADERS — More vibrant drop shadow
+   ---------------------------------------------------------- */
+.flower-section-header .big-flowers {
+  filter: drop-shadow(0 4px 8px rgba(233,30,140,0.4)) !important;
+}
+
+/* ----------------------------------------------------------
+   SCROLL TO TOP — Vivid
+   ---------------------------------------------------------- */
+#scrollTopBtn {
+  background: linear-gradient(135deg, #880E4F, #E65100) !important;
+  box-shadow: 0 4px 20px rgba(136,14,79,0.5) !important;
+}
+
+/* ----------------------------------------------------------
+   BREADCRUMB — Readable
+   ---------------------------------------------------------- */
+.breadcrumb-item a {
+  color: #880E4F !important;
+  font-weight: 700 !important;
+}
+
+.breadcrumb-item.active {
+  color: #3E0030 !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   CTA SECTION
+   ---------------------------------------------------------- */
+section[style*="2C1810"],
+section[style*="4A1533"] {
+  background: linear-gradient(135deg, #1A0010 0%, #3E0030 50%, #1A0010 100%) !important;
+}
+
+/* ----------------------------------------------------------
+   ACCORDION — About page
+   ---------------------------------------------------------- */
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #FCE4EC, #FFF8E1) !important;
+  color: #880E4F !important;
+  font-weight: 700 !important;
+}
+
+.accordion-button {
+  color: #1A0010 !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   SEARCH BOX
+   ---------------------------------------------------------- */
+.search-box {
+  border: 2px solid #E91E8C !important;
+  color: #1A0010 !important;
+}
+
+.search-box:focus {
+  border-color: #880E4F !important;
+  box-shadow: 0 0 0 3px rgba(233,30,140,0.2) !important;
+}
+
+/* ----------------------------------------------------------
+   INPUT GROUP — Prices search
+   ---------------------------------------------------------- */
+.input-group-text {
+  background: linear-gradient(135deg, #FCE4EC, #FFF8E1) !important;
+  border-color: #E91E8C !important;
+  color: #880E4F !important;
+}
+
+/* ----------------------------------------------------------
+   FESTIVE BADGE PILLS in page heroes
+   ---------------------------------------------------------- */
+.festive-badge-pill,
+span[style*="FFE4F0"],
+span[style*="FFF0CC"] {
+  background: linear-gradient(135deg, #FCE4EC, #FFF8E1) !important;
+  color: #880E4F !important;
+  border: 1px solid rgba(233,30,140,0.3) !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   SPECIAL OFFER RIBBON on cards
+   ---------------------------------------------------------- */
+.offer-ribbon {
+  background: linear-gradient(135deg, #880E4F, #E65100) !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+}
+
+/* ----------------------------------------------------------
+   FINAL RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem !important; }
+  .hero-title .highlight { font-size: 2.2rem !important; }
+  .section-title { font-size: 1.9rem !important; }
+  .offer-main-title { font-size: 1.8rem !important; }
+  .page-hero h1 { font-size: 2rem !important; }
 }
