@@ -20,7 +20,7 @@
   <!-- Bootstrap Icons — icon font library -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <!-- Google Fonts — Playfair Display (headings) + Poppins (body) -->
-  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Tiro+Telugu&family=Poppins:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <!-- Our custom CSS — always load AFTER Bootstrap so we can override it -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -178,34 +178,67 @@
   <!-- END HERO SECTION -->
 
   <!-- BIG BATHUKAMMA FLOWER TOWER ROW -->
+  <!-- ===============================================
+       BATHUKAMMA SHAPE — True pyramid flower stack
+       Wide base → narrows → diya at top (like real Bathukamma)
+  ================================================ -->
   <div class="bathukamma-decor-row">
-    <div class="towers-row">
-      <div class="tower-wrap tower-sm">
-        <span class="tl">🌼</span><span class="tl">🌸</span><span class="tl">🌺</span>
-        <span class="tl">🌻</span><span class="tl">🌼</span><span class="tl">🌸</span>
-      </div>
-      <div class="tower-wrap tower-md">
-        <span class="tl">🌸</span><span class="tl">🌼</span><span class="tl">🌺</span>
-        <span class="tl">🌸</span><span class="tl">🌼</span><span class="tl">🌺</span>
-        <span class="tl">🌸</span><span class="tl">🪔</span>
-      </div>
-      <div class="tower-wrap tower-lg">
-        <span class="tl">🌸</span><span class="tl">🌺</span><span class="tl">🌼</span>
-        <span class="tl">🌸</span><span class="tl">🌺</span><span class="tl">🌼</span>
-        <span class="tl">🌸</span><span class="tl">🌺</span><span class="tl">🪔</span>
-      </div>
-      <div class="tower-wrap tower-md">
-        <span class="tl">🌺</span><span class="tl">🌸</span><span class="tl">🌼</span>
-        <span class="tl">🌺</span><span class="tl">🌸</span><span class="tl">🌼</span>
-        <span class="tl">🌺</span><span class="tl">🪔</span>
-      </div>
-      <div class="tower-wrap tower-sm">
-        <span class="tl">🌺</span><span class="tl">🌼</span><span class="tl">🌸</span>
-        <span class="tl">🌺</span><span class="tl">🌼</span><span class="tl">🌸</span>
-      </div>
-    </div>
-    <p class="decor-text">🌸 బతుకమ్మ పండుగ శుభాకాంక్షలు 🌸</p>
-    <p class="decor-sub">Bathukamma &amp; Dussehra Festive Celebrations</p>
+    <div class="bk-shape-wrap">
+
+      <!-- Single centered Bathukamma pyramid -->
+      <div class="bk-pyramid">
+
+        <!-- TOP: Diya lamp flame -->
+        <div class="bk-row bk-row-top">
+          <span class="bk-diya">🪔</span>
+        </div>
+
+        <!-- Layer 1 — very tip (1 flower) -->
+        <div class="bk-row" style="--n:1; --sz:1.6rem; --color:#FFD600;">
+          <span>🌸</span>
+        </div>
+
+        <!-- Layer 2 — (3 flowers) -->
+        <div class="bk-row" style="--n:3; --sz:1.8rem; --color:#FF8F00;">
+          <span>🌺</span><span>🌼</span><span>🌺</span>
+        </div>
+
+        <!-- Layer 3 — (5 flowers) -->
+        <div class="bk-row" style="--n:5; --sz:2rem; --color:#E91E8C;">
+          <span>🌸</span><span>🌼</span><span>🌺</span><span>🌼</span><span>🌸</span>
+        </div>
+
+        <!-- Layer 4 — (7 flowers) -->
+        <div class="bk-row" style="--n:7; --sz:2.2rem; --color:#FFD600;">
+          <span>🌺</span><span>🌸</span><span>🌼</span><span>🌸</span><span>🌼</span><span>🌸</span><span>🌺</span>
+        </div>
+
+        <!-- Layer 5 — (9 flowers) -->
+        <div class="bk-row" style="--n:9; --sz:2.4rem; --color:#FF8F00;">
+          <span>🌼</span><span>🌺</span><span>🌸</span><span>🌼</span><span>🌺</span><span>🌼</span><span>🌸</span><span>🌺</span><span>🌼</span>
+        </div>
+
+        <!-- Layer 6 — (11 flowers) -->
+        <div class="bk-row" style="--n:11; --sz:2.6rem; --color:#E91E8C;">
+          <span>🌸</span><span>🌼</span><span>🌺</span><span>🌸</span><span>🌼</span><span>🌺</span><span>🌼</span><span>🌸</span><span>🌺</span><span>🌼</span><span>🌸</span>
+        </div>
+
+        <!-- Layer 7 — base (13 flowers) -->
+        <div class="bk-row" style="--n:13; --sz:2.8rem; --color:#FFD600;">
+          <span>🌺</span><span>🌸</span><span>🌼</span><span>🌺</span><span>🌸</span><span>🌼</span><span>🌺</span><span>🌼</span><span>🌸</span><span>🌺</span><span>🌼</span><span>🌸</span><span>🌺</span>
+        </div>
+
+        <!-- BASE: Plate/tray (like the saucer under Bathukamma) -->
+        <div class="bk-base">
+          <span>🟤</span><span>🟤</span><span>🟤</span><span>🟤</span><span>🟤</span>
+        </div>
+
+      </div><!-- end bk-pyramid -->
+
+      <p class="decor-text">🌸 బతుకమ్మ పండుగ శుభాకాంక్షలు 🌸</p>
+      <p class="decor-sub">Bathukamma &amp; Dussehra Festive Celebrations</p>
+
+    </div><!-- end bk-shape-wrap -->
   </div>
 
   <!-- ======================================================
@@ -740,6 +773,7 @@
 
 </body>
 </html>
+
 
 
 
