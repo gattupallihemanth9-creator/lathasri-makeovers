@@ -3501,6 +3501,7 @@ section h5 {
   background: linear-gradient(135deg, #1A0028 0%, #2D0050 50%, #1A0028 100%) !important;
   border-top: 3px solid var(--bk-marigold) !important;
   border-bottom: 3px solid var(--bk-marigold) !important;
+  padding: 10px 0 !important;
 }
 
 .bathukamma-decor-row .decor-text {
@@ -3703,7 +3704,7 @@ section[style*="3E0030"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px 20px;
+  padding: 16px 20px 12px;
   position: relative;
   z-index: 2;
 }
@@ -3751,10 +3752,10 @@ section[style*="3E0030"] {
 }
 
 .bk-diya {
-  font-size: 2.6rem !important;
+  font-size: 1.6rem !important;
   display: block;
   animation: diyaGlow 1.4s ease-in-out infinite !important;
-  filter: drop-shadow(0 0 12px #FFD700) drop-shadow(0 0 25px #FF8F00);
+  filter: drop-shadow(0 0 8px #FFD700) drop-shadow(0 0 16px #FF8F00);
 }
 
 @keyframes diyaGlow {
