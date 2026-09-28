@@ -1,36 +1,73 @@
 /* ==========================================================
-   style.css — Lathasri Makeovers | Bathukamma Festive Theme
+   style.css — Lathasri Makeovers | GRAND BATHUKAMMA THEME
    Author: Kiro AI
-   Description: Bold, vibrant Bathukamma festive theme.
+   GRAND BATHUKAMMA COLOR INSPIRATION:
+   Purple  #4A0E6B — Evening sky at celebrations
+   Teal    #00695C — Fresh banana & turmeric leaves
+   Marigold #FF8F00 — Marigold garland flowers
+   Hot Pink #E91E8C — Chrysanthemum petals
+   Gold    #FFD600 — Sacred deepam (lamp) light
+   Crimson #B71C1C — Kumkum & sindoor red
+   Cream   #FFF8E1 — Jasmine & white flowers
    ========================================================== */
 
 /* ----------------------------------------------------------
-   1. CSS VARIABLES — Bold Vibrant Bathukamma Palette
+   1. CSS VARIABLES — Grand Bathukamma Color System
    ---------------------------------------------------------- */
 :root {
-  /* Bold vibrant Bathukamma palette */
-  --primary-color: #E91E8C;       /* Hot Magenta Pink */
-  --primary-light: #FCE4EC;       /* Light pink tint */
-  --primary-dark:  #AD1457;       /* Deep magenta */
-  --secondary-color: #FFB300;     /* Bright Amber Gold */
-  --secondary-dark:  #E65100;     /* Deep orange */
-  --accent-marigold: #FF6D00;     /* Bright marigold */
-  --accent-yellow:   #FFD600;     /* Vivid yellow */
-  --accent-green:    #2E7D32;     /* Leaf green */
-  --accent-magenta:  #880E4F;     /* Very deep magenta */
-  --accent-cream:    #FFF8E1;     /* Warm cream */
-  --text-color: #1A0010;          /* Near-black — maximum readability */
-  --text-light: #4A0030;          /* Deep magenta-tinted dark — still readable */
-  --bg-white: #ffffff;
-  --bg-light: #FFF0F5;            /* Light pink — clearly visible */
-  --bg-festive: linear-gradient(135deg, #FCE4EC 0%, #FFF8E1 50%, #FCE4EC 100%);
-  --shadow-sm: 0 2px 14px rgba(233,30,140,0.18);
-  --shadow-md: 0 4px 28px rgba(233,30,140,0.22);
-  --shadow-lg: 0 8px 36px rgba(233,30,140,0.28);
+  /* Core Grand Bathukamma Colors */
+  --bk-purple:      #4A0E6B;
+  --bk-purple-mid:  #7B1FA2;
+  --bk-purple-lt:   #CE93D8;
+  --bk-teal:        #00695C;
+  --bk-teal-lt:     #4DB6AC;
+  --bk-marigold:    #FF8F00;
+  --bk-marigold-lt: #FFB300;
+  --bk-pink:        #E91E8C;
+  --bk-pink-dk:     #880E4F;
+  --bk-gold:        #FFD600;
+  --bk-gold-dk:     #F9A825;
+  --bk-crimson:     #B71C1C;
+  --bk-cream:       #FFF8E1;
+  --bk-dark:        #1A0028;
+  --bk-dark2:       #2D0050;
+
+  /* Mapped to existing CSS classes */
+  --primary-color:   #E91E8C;
+  --primary-light:   #FCE4EC;
+  --primary-dark:    #880E4F;
+  --secondary-color: #FFD600;
+  --secondary-dark:  #FF8F00;
+  --accent-marigold: #FF8F00;
+  --accent-yellow:   #FFD600;
+  --accent-green:    #00695C;
+  --accent-magenta:  #4A0E6B;
+  --accent-cream:    #FFF8E1;
+
+  /* Text — deep jewel for readability on cream */
+  --text-color:  #1A0028;
+  --text-light:  #4A0E6B;
+
+  /* Backgrounds */
+  --bg-white:   #ffffff;
+  --bg-light:   #F3E5F5;   /* Lavender tint — clearly festive */
+  --bg-festive: linear-gradient(135deg,#F3E5F5 0%,#FFF8E1 50%,#E0F2F1 100%);
+
+  /* Shadows — purple-tinted */
+  --shadow-sm: 0 2px 14px rgba(74,14,107,0.20);
+  --shadow-md: 0 4px 28px rgba(74,14,107,0.28);
+  --shadow-lg: 0 8px 36px rgba(74,14,107,0.35);
+
   --border-radius: 16px;
   --transition: all 0.35s ease;
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Poppins', sans-serif;
+
+  /* === GRAND BATHUKAMMA FONTS === */
+  /* Rozha One — bold traditional Indian display font */
+  /* Tiro Telugu — authentic Telugu script look for decorative text */
+  /* Poppins — clean modern body text */
+  --font-heading: 'Rozha One', 'Playfair Display', serif;
+  --font-body:    'Poppins', sans-serif;
+  --font-telugu:  'Tiro Telugu', 'Yatra One', serif;
 }
 
 /* ----------------------------------------------------------
@@ -2922,4 +2959,733 @@ span[style*="FFF0CC"] {
   .section-title { font-size: 1.9rem !important; }
   .offer-main-title { font-size: 1.8rem !important; }
   .page-hero h1 { font-size: 2rem !important; }
+}
+
+
+/* ==========================================================
+   GRAND BATHUKAMMA COMPLETE DESIGN OVERRIDES
+   Colors: Purple + Teal + Marigold + Gold + Pink + Crimson
+   Fonts: Rozha One + Poppins
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   BODY & BASE
+   ---------------------------------------------------------- */
+body {
+  font-family: var(--font-body) !important;
+  background: #fff !important;
+  color: var(--bk-dark) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--bk-dark) !important;
+  letter-spacing: 0.3px;
+}
+
+p, li, td, span, small {
+  font-family: var(--font-body) !important;
+  color: var(--bk-dark) !important;
+}
+
+/* Telugu decorative text class */
+.telugu-text {
+  font-family: var(--font-telugu) !important;
+}
+
+/* ----------------------------------------------------------
+   TOP BANNER — Purple to Marigold shimmer
+   ---------------------------------------------------------- */
+.bathukamma-banner {
+  background: linear-gradient(90deg,
+    #4A0E6B, #7B1FA2, #E91E8C, #FF8F00, #FFD600,
+    #FF8F00, #E91E8C, #7B1FA2, #4A0E6B) !important;
+  background-size: 300% auto !important;
+  animation: bannerShimmer 4s linear infinite !important;
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.2px !important;
+  padding: 11px 16px !important;
+}
+
+/* Ladies banner */
+.ladies-banner {
+  background: linear-gradient(90deg, #4A0E6B, #7B1FA2) !important;
+  color: #FFD600 !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR — Jewel purple bottom border
+   ---------------------------------------------------------- */
+.navbar {
+  background: #fff !important;
+  border-bottom: 4px solid var(--bk-purple) !important;
+  box-shadow: 0 3px 20px rgba(74,14,107,0.2) !important;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading) !important;
+  font-size: 1.6rem !important;
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.navbar-brand span {
+  font-family: var(--font-body) !important;
+  color: #FF8F00 !important;
+  -webkit-text-fill-color: #FF8F00 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  color: var(--bk-dark) !important;
+  font-size: 0.88rem !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1) !important;
+  color: var(--bk-purple) !important;
+}
+
+/* Festive Offers nav item */
+.festive-nav {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  color: #FFD600 !important;
+  -webkit-text-fill-color: #FFD600 !important;
+  border-radius: 20px !important;
+}
+
+/* ----------------------------------------------------------
+   HERO SECTION — Grand purple-to-teal celebration
+   ---------------------------------------------------------- */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #F3E5F5 0%,
+    #FFF8E1 30%,
+    #E0F2F1 60%,
+    #F3E5F5 100%
+  ) !important;
+}
+
+.hero-title {
+  font-family: var(--font-heading) !important;
+  font-size: 3.2rem !important;
+  font-weight: 400 !important; /* Rozha One is naturally bold */
+  color: var(--bk-dark) !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C, #FF8F00) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body) !important;
+  color: #2D0050 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.hero-festive-msg {
+  background: linear-gradient(135deg, #4A0E6B, #00695C) !important;
+  color: #FFD600 !important;
+  border-left: none !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  display: inline-block !important;
+  padding: 10px 18px !important;
+}
+
+/* Hero stats */
+.hero-section h4 {
+  color: var(--bk-purple) !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1.9rem !important;
+}
+
+.hero-section small {
+  color: #2D0050 !important;
+  font-weight: 600 !important;
+}
+
+/* Hero image — organic frame */
+.hero-image-wrap img {
+  border-radius: 40% 60% 40% 60% / 60% 40% 60% 40% !important;
+  box-shadow: 0 12px 40px rgba(74,14,107,0.3) !important;
+}
+
+/* ----------------------------------------------------------
+   BUTTONS — Jewel tone combinations
+   ---------------------------------------------------------- */
+.btn-primary-custom {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  color: #fff !important;
+  border: none !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 18px rgba(74,14,107,0.4) !important;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(135deg, #00695C, #FF8F00) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 24px rgba(0,105,92,0.45) !important;
+  transform: translateY(-3px) !important;
+}
+
+.btn-outline-custom {
+  color: var(--bk-purple) !important;
+  border: 2px solid var(--bk-purple) !important;
+  font-weight: 700 !important;
+}
+
+.btn-outline-custom:hover {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  transform: translateY(-3px) !important;
+}
+
+.btn-festive-offer {
+  background: linear-gradient(135deg, #FFD600, #FF8F00) !important;
+  color: #1A0028 !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  box-shadow: 0 4px 20px rgba(255,143,0,0.5) !important;
+  letter-spacing: 0.5px !important;
+}
+
+.btn-festive-offer:hover {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  color: #FFD600 !important;
+  transform: translateY(-4px) scale(1.03) !important;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #00695C, #00897B) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #004D40, #00695C) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ----------------------------------------------------------
+   PAGE HERO — Rich jewel gradient
+   ---------------------------------------------------------- */
+.page-hero {
+  background: linear-gradient(
+    135deg,
+    #F3E5F5 0%, #FFF8E1 40%, #E0F2F1 100%
+  ) !important;
+  border-bottom: 4px solid var(--bk-purple) !important;
+  padding: 70px 0 50px !important;
+}
+
+.page-hero h1 {
+  font-family: var(--font-heading) !important;
+  color: var(--bk-purple) !important;
+  font-size: 2.6rem !important;
+  font-weight: 400 !important;
+}
+
+.page-hero p {
+  color: #2D0050 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+/* ----------------------------------------------------------
+   SECTION TITLES
+   ---------------------------------------------------------- */
+.section-title {
+  font-family: var(--font-heading) !important;
+  font-size: 2.5rem !important;
+  font-weight: 400 !important;
+  background: linear-gradient(135deg, #4A0E6B, #00695C) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  letter-spacing: 0.5px !important;
+}
+
+.section-subtitle {
+  color: #2D0050 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+/* Section title flower decoration */
+.section-title::after {
+  content: '🌸 🌼 🌺' !important;
+  display: block !important;
+  font-size: 1.8rem !important;
+  margin: 10px auto 0 !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Festive heading with side flowers */
+.festive-heading::before { content: '🌸 ' !important; }
+.festive-heading::after  { content: ' 🌸' !important; }
+
+/* ----------------------------------------------------------
+   SECTION BACKGROUNDS — Alternating jewel tints
+   ---------------------------------------------------------- */
+.bg-light-pink,
+section[class*="section-padding"][style*="FFF0F5"],
+section[class*="section-padding"][style*="FFF8E7"],
+section[class*="section-padding"][style*="FFF0E0"],
+section[class*="section-padding"][style*="FCE4EC"] {
+  background: linear-gradient(135deg, #F3E5F5 0%, #E0F2F1 100%) !important;
+}
+
+/* White sections */
+section[class*="section-padding"][style*="background:#fff"] {
+  background: #fff !important;
+}
+
+/* ----------------------------------------------------------
+   SERVICE CARDS
+   ---------------------------------------------------------- */
+.service-card {
+  border: 2px solid rgba(74,14,107,0.15) !important;
+  border-top: 4px solid var(--bk-purple) !important;
+}
+
+.service-card:hover {
+  border-color: var(--bk-marigold) !important;
+  border-top-color: var(--bk-marigold) !important;
+  box-shadow: 0 10px 35px rgba(74,14,107,0.25) !important;
+  transform: translateY(-10px) !important;
+}
+
+.service-card .card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.15rem !important;
+  font-weight: 400 !important;
+  color: var(--bk-purple) !important;
+}
+
+.service-card .card-title i {
+  color: var(--bk-marigold) !important;
+  -webkit-text-fill-color: var(--bk-marigold) !important;
+}
+
+.service-card .card-text {
+  color: #2D0050 !important;
+  font-size: 0.88rem !important;
+}
+
+.price-badge {
+  background: linear-gradient(135deg, #4A0E6B, #7B1FA2) !important;
+  color: #FFD600 !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  font-size: 0.88rem !important;
+  box-shadow: 0 3px 10px rgba(74,14,107,0.3) !important;
+}
+
+/* ----------------------------------------------------------
+   WHY CHOOSE US ICONS
+   ---------------------------------------------------------- */
+.feature-icon-box {
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1) !important;
+  border: 2px solid rgba(74,14,107,0.2) !important;
+}
+
+.feature-icon-box:hover {
+  background: linear-gradient(135deg, #4A0E6B, #00695C) !important;
+  transform: scale(1.12) rotate(5deg) !important;
+}
+
+.feature-icon-box i {
+  color: var(--bk-purple) !important;
+  -webkit-text-fill-color: var(--bk-purple) !important;
+}
+
+.feature-icon-box:hover i {
+  color: #FFD600 !important;
+  -webkit-text-fill-color: #FFD600 !important;
+}
+
+section h5 {
+  font-family: var(--font-heading) !important;
+  color: var(--bk-dark) !important;
+  font-size: 1.1rem !important;
+}
+
+/* ----------------------------------------------------------
+   TESTIMONIALS
+   ---------------------------------------------------------- */
+.testimonial-card {
+  border-left: 5px solid var(--bk-marigold) !important;
+  background: linear-gradient(135deg, #fffaf0, #fff) !important;
+}
+
+.testimonial-card p {
+  color: #2D0050 !important;
+  font-size: 0.92rem !important;
+}
+
+.reviewer-name {
+  color: var(--bk-purple) !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+}
+
+.testimonial-card .stars {
+  color: var(--bk-marigold) !important;
+  font-size: 1.1rem !important;
+}
+
+/* ----------------------------------------------------------
+   PRICE TABLE
+   ---------------------------------------------------------- */
+.price-table thead {
+  background: linear-gradient(135deg, #4A0E6B, #7B1FA2) !important;
+  color: #FFD600 !important;
+}
+
+.price-table tbody tr:hover {
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1) !important;
+}
+
+.price-table tbody td {
+  color: #1A0028 !important;
+  font-weight: 500 !important;
+}
+
+.price-table tbody td:first-child {
+  color: var(--bk-purple) !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1.1rem !important;
+}
+
+.badge-parlour {
+  background: linear-gradient(135deg, #F3E5F5, #CE93D8) !important;
+  color: #4A0E6B !important;
+  font-weight: 700 !important;
+}
+
+.badge-tailoring {
+  background: linear-gradient(135deg, #E0F2F1, #80CBC4) !important;
+  color: #004D40 !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   GALLERY
+   ---------------------------------------------------------- */
+.gallery-overlay {
+  background: linear-gradient(transparent, rgba(74,14,107,0.92)) !important;
+}
+
+.gallery-item {
+  border: 2px solid rgba(74,14,107,0.15) !important;
+}
+
+.gallery-item:hover {
+  border-color: var(--bk-marigold) !important;
+  box-shadow: 0 8px 30px rgba(74,14,107,0.25) !important;
+}
+
+.filter-btn {
+  border-color: var(--bk-purple) !important;
+  color: var(--bk-purple) !important;
+  font-weight: 700 !important;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  color: #FFD600 !important;
+  border-color: transparent !important;
+}
+
+/* ----------------------------------------------------------
+   CONTACT PAGE
+   ---------------------------------------------------------- */
+.contact-icon {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+}
+
+.contact-form-card {
+  border-top: 5px solid var(--bk-purple) !important;
+}
+
+.form-control-custom:focus {
+  border-color: var(--bk-purple) !important;
+  box-shadow: 0 0 0 3px rgba(74,14,107,0.18) !important;
+}
+
+.hours-table .time {
+  color: var(--bk-teal) !important;
+  font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   ABOUT PAGE
+   ---------------------------------------------------------- */
+.team-card img {
+  border-color: var(--bk-marigold) !important;
+}
+
+.mv-card {
+  border-top: 4px solid var(--bk-purple) !important;
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1) !important;
+}
+
+/* ----------------------------------------------------------
+   FESTIVAL OFFER SECTION
+   ---------------------------------------------------------- */
+.festival-offer-section {
+  background: linear-gradient(
+    135deg,
+    #1A0028 0%,
+    #2D0050 30%,
+    #004D40 70%,
+    #1A0028 100%
+  ) !important;
+}
+
+.offer-main-title {
+  font-family: var(--font-heading) !important;
+  font-size: 2.8rem !important;
+  font-weight: 400 !important;
+  color: var(--bk-gold) !important;
+  text-shadow: 0 0 30px rgba(255,214,0,0.6) !important;
+  letter-spacing: 1px !important;
+}
+
+.offer-subtitle {
+  color: var(--bk-purple-lt) !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+
+.offer-desc {
+  color: rgba(255,255,255,0.92) !important;
+}
+
+.offer-service-pill {
+  background: rgba(255,255,255,0.12) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,214,0,0.45) !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   BATHUKAMMA DECOR ROW
+   ---------------------------------------------------------- */
+.bathukamma-decor-row {
+  background: linear-gradient(135deg, #1A0028 0%, #2D0050 50%, #1A0028 100%) !important;
+  border-top: 3px solid var(--bk-marigold) !important;
+  border-bottom: 3px solid var(--bk-marigold) !important;
+}
+
+.bathukamma-decor-row .decor-text {
+  font-family: var(--font-heading) !important;
+  font-size: 1.3rem !important;
+  color: var(--bk-gold) !important;
+  text-shadow: 0 0 20px rgba(255,214,0,0.6) !important;
+  letter-spacing: 2px !important;
+}
+
+.bathukamma-decor-row .decor-sub {
+  color: var(--bk-purple-lt) !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   BATHUKAMMA GARLAND
+   ---------------------------------------------------------- */
+.bathukamma-garland {
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1, #FFF8E1) !important;
+  border-top: 3px solid var(--bk-purple) !important;
+  border-bottom: 3px solid var(--bk-purple) !important;
+  font-size: 2.4rem !important;
+}
+
+/* ----------------------------------------------------------
+   CTA SECTIONS
+   ---------------------------------------------------------- */
+section[style*="2C1810"],
+section[style*="4A1533"],
+section[style*="1A0010"],
+section[style*="3E0030"] {
+  background: linear-gradient(135deg, #1A0028 0%, #2D0050 40%, #004D40 100%) !important;
+}
+
+/* ----------------------------------------------------------
+   FOOTER — Grand deep jewel
+   ---------------------------------------------------------- */
+.footer {
+  background: linear-gradient(135deg, #1A0028 0%, #0D3030 50%, #1A0028 100%) !important;
+}
+
+.footer h5 {
+  font-family: var(--font-heading) !important;
+  color: var(--bk-gold) !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 1.5px !important;
+  font-weight: 400 !important;
+}
+
+.footer p, .footer li {
+  color: #CE93D8 !important;
+  font-size: 0.87rem !important;
+}
+
+.footer a {
+  color: #CE93D8 !important;
+}
+
+.footer a:hover {
+  color: var(--bk-gold) !important;
+  padding-left: 5px !important;
+}
+
+.footer-brand {
+  font-family: var(--font-heading) !important;
+  font-size: 1.8rem !important;
+  font-weight: 400 !important;
+  background: linear-gradient(135deg, #FFD600, #FF8F00) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,214,0,0.2) !important;
+  color: #CE93D8 !important;
+}
+
+.footer-festive-msg {
+  color: var(--bk-gold) !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+}
+
+.social-icon {
+  border: 1px solid rgba(255,214,0,0.3) !important;
+  color: #CE93D8 !important;
+}
+
+.social-icon:hover {
+  background: linear-gradient(135deg, #4A0E6B, #E91E8C) !important;
+  color: #FFD600 !important;
+}
+
+/* ----------------------------------------------------------
+   SCROLL TO TOP
+   ---------------------------------------------------------- */
+#scrollTopBtn {
+  background: linear-gradient(135deg, #4A0E6B, #FF8F00) !important;
+}
+
+/* ----------------------------------------------------------
+   OFFER RIBBON on cards
+   ---------------------------------------------------------- */
+.offer-ribbon {
+  background: linear-gradient(135deg, #4A0E6B, #FF8F00) !important;
+}
+
+/* ----------------------------------------------------------
+   BREADCRUMB
+   ---------------------------------------------------------- */
+.breadcrumb-item a {
+  color: var(--bk-purple) !important;
+  font-weight: 700 !important;
+}
+
+.breadcrumb-item.active {
+  color: #2D0050 !important;
+  font-weight: 600 !important;
+}
+
+/* ----------------------------------------------------------
+   FORM INPUTS
+   ---------------------------------------------------------- */
+.search-box {
+  border: 2px solid var(--bk-purple) !important;
+}
+
+.search-box:focus {
+  border-color: var(--bk-marigold) !important;
+  box-shadow: 0 0 0 3px rgba(74,14,107,0.2) !important;
+}
+
+.input-group-text {
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1) !important;
+  border-color: var(--bk-purple) !important;
+  color: var(--bk-purple) !important;
+}
+
+/* ----------------------------------------------------------
+   ACCORDION — About page
+   ---------------------------------------------------------- */
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #F3E5F5, #E0F2F1) !important;
+  color: var(--bk-purple) !important;
+  font-weight: 700 !important;
+}
+
+.accordion-button {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  color: #1A0028 !important;
+}
+
+/* ----------------------------------------------------------
+   FESTIVE SCROLLBAR
+   ---------------------------------------------------------- */
+::-webkit-scrollbar-track { background: #F3E5F5 !important; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4A0E6B, #FF8F00) !important;
+}
+
+/* Selection */
+::selection {
+  background: rgba(74,14,107,0.25) !important;
+  color: #1A0028 !important;
+}
+
+/* ----------------------------------------------------------
+   SPECIAL: Flower section headers
+   ---------------------------------------------------------- */
+.flower-section-header .big-flowers {
+  filter: drop-shadow(0 4px 10px rgba(74,14,107,0.4)) !important;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-title    { font-size: 2.1rem !important; }
+  .section-title { font-size: 2rem !important; }
+  .offer-main-title { font-size: 1.8rem !important; }
+  .page-hero h1  { font-size: 2rem !important; }
+  .footer-brand  { font-size: 1.4rem !important; }
 }
